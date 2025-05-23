@@ -1,0 +1,68 @@
+[2025-05-24T04:38:21.735+0530] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-05-24T04:38:21.763+0530] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: order_monitoring_dag1.run_dbt_models manual__2025-05-23T23:08:12.310013+00:00 [queued]>
+[2025-05-24T04:38:21.767+0530] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: order_monitoring_dag1.run_dbt_models manual__2025-05-23T23:08:12.310013+00:00 [queued]>
+[2025-05-24T04:38:21.768+0530] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2025-05-24T04:38:21.776+0530] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): run_dbt_models> on 2025-05-23 23:08:12.310013+00:00
+[2025-05-24T04:38:21.788+0530] {logging_mixin.py:188} WARNING - /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=16176) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-05-24T04:38:21.789+0530] {standard_task_runner.py:63} INFO - Started process 16177 to run task
+[2025-05-24T04:38:21.787+0530] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'order_monitoring_dag1', 'run_dbt_models', 'manual__2025-05-23T23:08:12.310013+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/order_monitoring_dag.py', '--cfg-path', '/var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T/tmpq2uxq2_4']
+[2025-05-24T04:38:21.791+0530] {standard_task_runner.py:91} INFO - Job 7: Subtask run_dbt_models
+[2025-05-24T04:38:21.829+0530] {task_command.py:426} INFO - Running <TaskInstance: order_monitoring_dag1.run_dbt_models manual__2025-05-23T23:08:12.310013+00:00 [running]> on host zafars-macbook-pro.local
+[2025-05-24T04:38:21.880+0530] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='order_monitoring_dag1' AIRFLOW_CTX_TASK_ID='run_dbt_models' AIRFLOW_CTX_EXECUTION_DATE='2025-05-23T23:08:12.310013+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-23T23:08:12.310013+00:00'
+[2025-05-24T04:38:21.882+0530] {taskinstance.py:430} INFO - ::endgroup::
+[2025-05-24T04:38:21.883+0530] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T
+[2025-05-24T04:38:21.884+0530] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd "/Users/zafarimam/Documents/E-Commerce Order Pipeline/dbt_ecommerce" && dbt run']
+[2025-05-24T04:38:21.890+0530] {subprocess.py:86} INFO - Output:
+[2025-05-24T04:38:22.973+0530] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-24T04:38:22.974+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/bin/dbt", line 5, in <module>
+[2025-05-24T04:38:22.974+0530] {subprocess.py:93} INFO -     from dbt.cli.main import cli
+[2025-05-24T04:38:22.975+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/__init__.py", line 1, in <module>
+[2025-05-24T04:38:22.975+0530] {subprocess.py:93} INFO -     from .main import cli as dbt_cli  # noqa
+[2025-05-24T04:38:22.976+0530] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-24T04:38:22.976+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/cli/main.py", line 13, in <module>
+[2025-05-24T04:38:22.977+0530] {subprocess.py:93} INFO -     from dbt.artifacts.schemas.run import RunExecutionResult
+[2025-05-24T04:38:22.977+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/artifacts/schemas/run/__init__.py", line 2, in <module>
+[2025-05-24T04:38:22.978+0530] {subprocess.py:93} INFO -     from dbt.artifacts.schemas.run.v5.run import *  # noqa
+[2025-05-24T04:38:22.978+0530] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-24T04:38:22.978+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/artifacts/schemas/run/v5/run.py", line 23, in <module>
+[2025-05-24T04:38:22.979+0530] {subprocess.py:93} INFO -     from dbt.artifacts.schemas.results import (
+[2025-05-24T04:38:22.979+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/artifacts/schemas/results.py", line 5, in <module>
+[2025-05-24T04:38:22.980+0530] {subprocess.py:93} INFO -     from dbt.contracts.graph.nodes import ResultNode
+[2025-05-24T04:38:22.981+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/contracts/graph/nodes.py", line 67, in <module>
+[2025-05-24T04:38:22.981+0530] {subprocess.py:93} INFO -     from dbt.contracts.graph.unparsed import (
+[2025-05-24T04:38:22.982+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/contracts/graph/unparsed.py", line 9, in <module>
+[2025-05-24T04:38:22.982+0530] {subprocess.py:93} INFO -     from dbt import deprecations
+[2025-05-24T04:38:22.982+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/deprecations.py", line 4, in <module>
+[2025-05-24T04:38:22.983+0530] {subprocess.py:93} INFO -     import dbt.tracking
+[2025-05-24T04:38:22.983+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/tracking.py", line 20, in <module>
+[2025-05-24T04:38:22.984+0530] {subprocess.py:93} INFO -     from dbt.events.types import (
+[2025-05-24T04:38:22.984+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/events/__init__.py", line 4, in <module>
+[2025-05-24T04:38:22.985+0530] {subprocess.py:93} INFO -     import dbt.events.types as core_dbt_event_types
+[2025-05-24T04:38:22.985+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/events/types.py", line 4, in <module>
+[2025-05-24T04:38:22.986+0530] {subprocess.py:93} INFO -     from dbt.events.base_types import (
+[2025-05-24T04:38:22.986+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/events/base_types.py", line 2, in <module>
+[2025-05-24T04:38:22.987+0530] {subprocess.py:93} INFO -     from dbt.events import core_types_pb2
+[2025-05-24T04:38:22.987+0530] {subprocess.py:93} INFO -   File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/dbt/events/core_types_pb2.py", line 9, in <module>
+[2025-05-24T04:38:22.988+0530] {subprocess.py:93} INFO -     from google.protobuf import runtime_version as _runtime_version
+[2025-05-24T04:38:22.988+0530] {subprocess.py:93} INFO - ImportError: cannot import name 'runtime_version' from 'google.protobuf' (/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/google/protobuf/__init__.py)
+[2025-05-24T04:38:23.113+0530] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-24T04:38:23.114+0530] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-05-24T04:38:23.121+0530] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-24T04:38:23.127+0530] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=order_monitoring_dag1, task_id=run_dbt_models, execution_date=20250523T230812, start_date=20250523T230821, end_date=20250523T230823
+[2025-05-24T04:38:23.136+0530] {standard_task_runner.py:110} ERROR - Failed to execute job 7 for task run_dbt_models (Bash command failed. The command returned a non-zero exit code 1.; 16177)
+[2025-05-24T04:38:23.144+0530] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-05-24T04:38:23.162+0530] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-24T04:38:23.165+0530] {local_task_job_runner.py:222} INFO - ::endgroup::
