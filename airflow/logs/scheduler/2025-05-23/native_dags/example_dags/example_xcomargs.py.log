@@ -230,3 +230,11 @@
 [2025-05-24T05:20:48.320+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:20:48.320+0530] {dag.py:3954} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
 [2025-05-24T05:20:48.324+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:20:48.324+0530] {dag.py:3954} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
 [2025-05-24T05:20:48.340+0530] {processor.py:183} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py took 0.233 seconds
+[2025-05-24T05:28:32.087+0530] {processor.py:161} INFO - Started process (PID=20682) to work on /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py
+[2025-05-24T05:28:32.088+0530] {processor.py:830} INFO - Processing file /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2025-05-24T05:28:32.089+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:28:32.089+0530] {dagbag.py:540} INFO - Filling up the DagBag from /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py
+[2025-05-24T05:28:32.126+0530] {processor.py:840} INFO - DAG(s) 'example_xcom_args_with_operators', 'example_xcom_args' retrieved from /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py
+[2025-05-24T05:28:32.356+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:28:32.356+0530] {dag.py:3096} INFO - Sync 2 DAGs
+[2025-05-24T05:28:32.363+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:28:32.363+0530] {dag.py:3954} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2025-05-24T05:28:32.365+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:28:32.365+0530] {dag.py:3954} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2025-05-24T05:28:32.378+0530] {processor.py:183} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py took 0.294 seconds

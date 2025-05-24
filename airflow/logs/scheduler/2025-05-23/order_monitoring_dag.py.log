@@ -191,3 +191,10 @@ NameError: name 'sdfds' is not defined
 [2025-05-24T05:20:17.696+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:20:17.696+0530] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-05-24T05:20:17.716+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:20:17.716+0530] {dag.py:3954} INFO - Setting next_dagrun for order_monitoring_dag1 to 2025-05-23 23:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
 [2025-05-24T05:20:17.734+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow/dags/order_monitoring_dag.py took 0.217 seconds
+[2025-05-24T05:27:58.903+0530] {processor.py:161} INFO - Started process (PID=20632) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow/dags/order_monitoring_dag.py
+[2025-05-24T05:27:58.905+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-24T05:27:58.905+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:27:58.905+0530] {dagbag.py:540} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow/dags/order_monitoring_dag.py
+[2025-05-24T05:27:58.916+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag1' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow/dags/order_monitoring_dag.py
+[2025-05-24T05:27:58.938+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:27:58.938+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-24T05:27:59.064+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:27:59.064+0530] {dag.py:3954} INFO - Setting next_dagrun for order_monitoring_dag1 to 2025-05-23 23:00:00+00:00, run_after=2025-05-24 00:00:00+00:00
+[2025-05-24T05:27:59.084+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow/dags/order_monitoring_dag.py took 0.184 seconds

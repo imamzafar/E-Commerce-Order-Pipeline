@@ -1,2 +1,3 @@
 /del.ipynb
 /notes for project.md
+airflow/dags/config/snowflake_config.yaml

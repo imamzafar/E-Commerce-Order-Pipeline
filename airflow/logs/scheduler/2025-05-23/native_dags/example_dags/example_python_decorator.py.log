@@ -230,3 +230,11 @@
 [2025-05-24T05:21:37.195+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:21:37.195+0530] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-05-24T05:21:37.203+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:21:37.203+0530] {dag.py:3954} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
 [2025-05-24T05:21:37.219+0530] {processor.py:183} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.205 seconds
+[2025-05-24T05:29:22.331+0530] {processor.py:161} INFO - Started process (PID=20736) to work on /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-05-24T05:29:22.333+0530] {processor.py:830} INFO - Processing file /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py for tasks to queue
+[2025-05-24T05:29:22.333+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:29:22.333+0530] {dagbag.py:540} INFO - Filling up the DagBag from /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-05-24T05:29:22.370+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:29:22.370+0530] {example_python_decorator.py:80} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2025-05-24T05:29:22.372+0530] {processor.py:840} INFO - DAG(s) 'example_python_decorator' retrieved from /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py
+[2025-05-24T05:29:22.638+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:29:22.637+0530] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-24T05:29:22.645+0530] {logging_mixin.py:188} INFO - [2025-05-24T05:29:22.645+0530] {dag.py:3954} INFO - Setting next_dagrun for example_python_decorator to None, run_after=None
+[2025-05-24T05:29:22.663+0530] {processor.py:183} INFO - Processing /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/airflow/example_dags/example_python_decorator.py took 0.334 seconds
