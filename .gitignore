@@ -1,3 +1,6 @@
 /del.ipynb
 /notes for project.md
 airflow/dags/config/snowflake_config.yaml
+airflow/airflow.cfg
+airflow/airflow.cfg
+airflow.cfg

@@ -1,4 +1,4 @@
-# $Id: it.py 9022 2022-03-04 15:54:56Z milde $
+# $Id: it.py 9116 2022-07-28 17:06:51Z milde $
 # Authors: Nicola Larosa <docutils@tekNico.net>;
 #          Lele Gaifax <lele@seldati.it>
 # Copyright: This module has been placed in the public domain.
@@ -27,7 +27,7 @@ directives = {
       'nota': 'note',
       'consiglio': 'tip',
       'avvertenza': 'warning',
-      'ammonizione': 'admonition',
+      'ammonizione': 'admonition',  # sic! Not used in this sense in rST.
       'riquadro': 'sidebar',
       'argomento': 'topic',
       'blocco-di-righe': 'line-block',

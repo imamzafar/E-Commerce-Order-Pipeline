@@ -1,0 +1,21 @@
+[2025-05-27T19:45:19.428+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: order_monitoring_dag16.check_delayed_orders manual__2025-05-27T14:15:03.733225+00:00 [queued]>
+[2025-05-27T19:45:19.433+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: order_monitoring_dag16.check_delayed_orders manual__2025-05-27T14:15:03.733225+00:00 [queued]>
+[2025-05-27T19:45:19.433+0530] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-05-27T19:45:19.443+0530] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): check_delayed_orders> on 2025-05-27 14:15:03.733225+00:00
+[2025-05-27T19:45:19.448+0530] {standard_task_runner.py:60} INFO - Started process 28827 to run task
+[2025-05-27T19:45:19.453+0530] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'order_monitoring_dag16', 'check_delayed_orders', 'manual__2025-05-27T14:15:03.733225+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/order_monitoring_dag.py', '--cfg-path', '/var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T/tmp7pjwor5a']
+[2025-05-27T19:45:19.454+0530] {standard_task_runner.py:88} INFO - Job 32: Subtask check_delayed_orders
+[2025-05-27T19:45:19.489+0530] {task_command.py:423} INFO - Running <TaskInstance: order_monitoring_dag16.check_delayed_orders manual__2025-05-27T14:15:03.733225+00:00 [running]> on host zafars-macbook-pro.local
+[2025-05-27T19:45:19.530+0530] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='imamzafar100@gmail.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='order_monitoring_dag16' AIRFLOW_CTX_TASK_ID='check_delayed_orders' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T14:15:03.733225+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-27T14:15:03.733225+00:00'
+[2025-05-27T19:45:19.532+0530] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T
+[2025-05-27T19:45:19.533+0530] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'source "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/activate" && python "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/utils/check_delayed_orders.py"']
+[2025-05-27T19:45:19.538+0530] {subprocess.py:86} INFO - Output:
+[2025-05-27T19:45:20.921+0530] {subprocess.py:93} INFO - ✅ Running Snowflake delayed orders check...
+[2025-05-27T19:45:20.922+0530] {subprocess.py:93} INFO - ✅ Python path: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python
+[2025-05-27T19:45:20.922+0530] {subprocess.py:93} INFO - ✅ Snowflake connector version: 3.15.0
+[2025-05-27T19:45:20.923+0530] {subprocess.py:93} INFO - ✅ Connected to Snowflake
+[2025-05-27T19:45:20.923+0530] {subprocess.py:93} INFO - ✅ Query Result: (0,)
+[2025-05-27T19:45:20.976+0530] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-27T19:45:20.995+0530] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=order_monitoring_dag16, task_id=check_delayed_orders, execution_date=20250527T141503, start_date=20250527T141519, end_date=20250527T141520
+[2025-05-27T19:45:21.010+0530] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-27T19:45:21.022+0530] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

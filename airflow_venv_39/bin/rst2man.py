@@ -1,4 +1,4 @@
-#!/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3
+#!/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3.9
 
 # Author:
 # Contact: grubert@users.sf.net
@@ -15,7 +15,7 @@ man page writer to output from ReStructuredText source.
 import locale
 try:
     locale.setlocale(locale.LC_ALL, '')
-except:
+except Exception:
     pass
 
 from docutils.core import publish_cmdline, default_description

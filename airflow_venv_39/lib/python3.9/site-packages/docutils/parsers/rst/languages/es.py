@@ -1,4 +1,4 @@
-# $Id: es.py 9030 2022-03-05 23:28:32Z milde $
+# $Id: es.py 9116 2022-07-28 17:06:51Z milde $
 # Author: Marcelo Huerta San Martín <richieadler@users.sourceforge.net>
 # Copyright: This module has been placed in the public domain.
 
@@ -27,7 +27,7 @@ directives = {
       'nota': 'note',
       'consejo': 'tip',
       'advertencia': 'warning',
-      'exhortacion': 'admonition',
+      'exhortacion': 'admonition',  # sic! Not used in this sense in rST.
       'exhortaci\u00f3n': 'admonition',
       'nota-al-margen': 'sidebar',
       'tema': 'topic',

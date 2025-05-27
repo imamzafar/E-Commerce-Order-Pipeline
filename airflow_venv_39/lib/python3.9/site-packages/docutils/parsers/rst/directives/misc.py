@@ -1,4 +1,4 @@
-# $Id: misc.py 9048 2022-03-29 21:50:15Z milde $
+# $Id: misc.py 9358 2023-04-19 23:31:13Z milde $
 # Authors: David Goodger <goodger@python.org>; Dethe Elza
 # Copyright: This module has been placed in the public domain.
 
@@ -6,9 +6,12 @@
 
 __docformat__ = 'reStructuredText'
 
-import os.path
+from pathlib import Path
 import re
 import time
+from urllib.request import urlopen
+from urllib.error import URLError
+
 from docutils import io, nodes, statemachine, utils
 from docutils.parsers.rst import Directive, convert_directive_function
 from docutils.parsers.rst import directives, roles, states
@@ -26,6 +29,8 @@ class Include(Directive):
     a part of the given file argument may be included by specifying
     start and end line or text to match before and/or after the text
     to be used.
+
+    https://docutils.sourceforge.io/docs/ref/rst/directives.html#including-an-external-document-fragment
     """
 
     required_arguments = 1
@@ -45,8 +50,7 @@ class Include(Directive):
                    'class': directives.class_option,
                    'name': directives.unchanged}
 
-    standard_include_path = os.path.join(os.path.dirname(states.__file__),
-                                         'include')
+    standard_include_path = Path(states.__file__).parent / 'include'
 
     def run(self):
         """Include a file as part of the content of this reST file.
@@ -56,14 +60,14 @@ class Include(Directive):
         """
         if not self.state.document.settings.file_insertion_enabled:
             raise self.warning('"%s" directive disabled.' % self.name)
-        source = self.state_machine.input_lines.source(
-            self.lineno - self.state_machine.input_offset - 1)
-        source_dir = os.path.dirname(os.path.abspath(source))
+        current_source = self.state.document.current_source
         path = directives.path(self.arguments[0])
         if path.startswith('<') and path.endswith('>'):
-            path = os.path.join(self.standard_include_path, path[1:-1])
-        path = os.path.normpath(os.path.join(source_dir, path))
-        path = utils.relative_path(None, path)
+            _base = self.standard_include_path
+            path = path[1:-1]
+        else:
+            _base = Path(current_source).parent
+        path = utils.relative_path(None, _base/path)
         encoding = self.options.get(
             'encoding', self.state.document.settings.input_encoding)
         e_handler = self.state.document.settings.input_encoding_error_handler
@@ -74,13 +78,12 @@ class Include(Directive):
                                         encoding=encoding,
                                         error_handler=e_handler)
         except UnicodeEncodeError:
-            raise self.severe('Problems with "%s" directive path:\n'
-                              'Cannot encode input file path "%s" '
-                              '(wrong locale?).' %
-                              (self.name, path))
+            raise self.severe(f'Problems with "{self.name}" directive path:\n'
+                              f'Cannot encode input file path "{path}" '
+                              '(wrong locale?).')
         except OSError as error:
-            raise self.severe('Problems with "%s" directive path:\n%s.' %
-                              (self.name, io.error_string(error)))
+            raise self.severe(f'Problems with "{self.name}" directive '
+                              f'path:\n{io.error_string(error)}.')
         else:
             self.state.document.settings.record_dependencies.add(path)
 
@@ -94,8 +97,8 @@ class Include(Directive):
             else:
                 rawtext = include_file.read()
         except UnicodeError as error:
-            raise self.severe('Problem with "%s" directive:\n%s' %
-                              (self.name, io.error_string(error)))
+            raise self.severe(f'Problem with "{self.name}" directive:\n'
+                              + io.error_string(error))
         # start-after/end-before: no restrictions on newlines in match-text,
         # and no restrictions on matching inside lines vs. line boundaries
         after_text = self.options.get('start-after', None)
@@ -173,8 +176,8 @@ class Include(Directive):
         clip_options = (startline, endline, before_text, after_text)
         include_log = self.state.document.include_log
         # log entries are tuples (<source>, <clip-options>)
-        if not include_log:  # new document
-            include_log.append((utils.relative_path(None, source),
+        if not include_log:  # new document, initialize with document source
+            include_log.append((utils.relative_path(None, current_source),
                                 (None, None, None, None)))
         if (path, clip_options) in include_log:
             master_paths = (pth for (pth, opt) in reversed(include_log))
@@ -244,18 +247,16 @@ class Raw(Directive):
                 raise self.error(
                     'The "file" and "url" options may not be simultaneously '
                     'specified for the "%s" directive.' % self.name)
-            source_dir = os.path.dirname(
-                os.path.abspath(self.state.document.current_source))
-            path = os.path.normpath(os.path.join(source_dir,
-                                                 self.options['file']))
-            path = utils.relative_path(None, path)
+            path = self.options['file']
+            _base = Path(self.state.document.current_source).parent
+            path = utils.relative_path(None, _base/path)
             try:
                 raw_file = io.FileInput(source_path=path,
                                         encoding=encoding,
                                         error_handler=e_handler)
             except OSError as error:
-                raise self.severe('Problems with "%s" directive path:\n%s.'
-                                  % (self.name, io.error_string(error)))
+                raise self.severe(f'Problems with "{self.name}" directive '
+                                  f'path:\n{io.error_string(error)}.')
             else:
                 # TODO: currently, raw input files are recorded as
                 # dependencies even if not used for the chosen output format.
@@ -263,31 +264,25 @@ class Raw(Directive):
             try:
                 text = raw_file.read()
             except UnicodeError as error:
-                raise self.severe('Problem with "%s" directive:\n%s'
-                                  % (self.name, io.error_string(error)))
+                raise self.severe(f'Problem with "{self.name}" directive:\n'
+                                  + io.error_string(error))
             attributes['source'] = path
         elif 'url' in self.options:
             source = self.options['url']
-            # Do not import urllib at the top of the module because
-            # it may fail due to broken SSL dependencies, and it takes
-            # about 0.15 seconds to load. Update: < 0.03s with Py3k.
-            from urllib.request import urlopen
-            from urllib.error import URLError
             try:
                 raw_text = urlopen(source).read()
             except (URLError, OSError) as error:
-                raise self.severe('Problems with "%s" directive URL "%s":\n%s.'
-                                  % (self.name,
-                                     self.options['url'],
-                                     io.error_string(error)))
+                raise self.severe(f'Problems with "{self.name}" directive URL '
+                                  f'"{self.options["url"]}":\n'
+                                  f'{io.error_string(error)}.')
             raw_file = io.StringInput(source=raw_text, source_path=source,
                                       encoding=encoding,
                                       error_handler=e_handler)
             try:
                 text = raw_file.read()
             except UnicodeError as error:
-                raise self.severe('Problem with "%s" directive:\n%s'
-                                  % (self.name, io.error_string(error)))
+                raise self.severe(f'Problem with "{self.name}" directive:\n'
+                                  + io.error_string(error))
             attributes['source'] = source
         else:
             # This will always fail because there is no content.

@@ -1,0 +1,1020 @@
+[2025-05-27T17:39:23.872+0530] {processor.py:161} INFO - Started process (PID=22860) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:39:23.873+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:39:23.874+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:39:23.874+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:39:23.907+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:39:23.905+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:39:23.907+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:39:23.985+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.113 seconds
+[2025-05-27T17:41:30.713+0530] {processor.py:161} INFO - Started process (PID=22944) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:41:30.715+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:41:30.715+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:41:30.715+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:41:30.746+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:41:30.745+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:41:30.746+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:41:30.819+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T17:43:23.078+0530] {processor.py:161} INFO - Started process (PID=23006) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:43:23.079+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:43:23.080+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:43:23.080+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:43:23.111+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:43:23.110+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:43:23.111+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:43:23.182+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.106 seconds
+[2025-05-27T17:45:07.713+0530] {processor.py:161} INFO - Started process (PID=23058) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:45:07.714+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:45:07.714+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:45:07.714+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:45:07.747+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:45:07.746+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:45:07.747+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:45:07.861+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.149 seconds
+[2025-05-27T17:52:08.003+0530] {processor.py:161} INFO - Started process (PID=23372) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:52:08.004+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:52:08.005+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:52:08.005+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:52:08.036+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:52:08.034+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:52:08.036+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:52:08.108+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T17:54:09.111+0530] {processor.py:161} INFO - Started process (PID=23798) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:54:09.113+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:54:09.114+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:54:09.114+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:54:09.155+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:54:09.153+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:54:09.156+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:54:09.276+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.167 seconds
+[2025-05-27T17:56:42.974+0530] {processor.py:161} INFO - Started process (PID=24088) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:56:42.976+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:56:42.977+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:56:42.977+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:56:43.009+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:56:43.007+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:56:43.009+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:56:43.084+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.110 seconds
+[2025-05-27T17:58:52.234+0530] {processor.py:161} INFO - Started process (PID=24866) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:58:52.236+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T17:58:52.236+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:58:52.236+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:58:52.270+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:58:52.268+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T17:58:52.270+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T17:58:52.349+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.116 seconds
+[2025-05-27T18:07:13.117+0530] {processor.py:161} INFO - Started process (PID=25133) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:07:13.119+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:07:13.120+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:07:13.120+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:07:13.152+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:07:13.151+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:07:13.153+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:07:13.230+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.114 seconds
+[2025-05-27T18:09:19.897+0530] {processor.py:161} INFO - Started process (PID=25198) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:09:19.898+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:09:19.899+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:09:19.899+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:09:19.931+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:09:19.930+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:09:19.931+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:09:20.004+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.108 seconds
+[2025-05-27T18:11:04.066+0530] {processor.py:161} INFO - Started process (PID=25253) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:11:04.067+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:11:04.068+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:11:04.068+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:11:04.098+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:11:04.097+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:11:04.098+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:11:04.168+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.103 seconds
+[2025-05-27T18:12:58.452+0530] {processor.py:161} INFO - Started process (PID=25311) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:12:58.453+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:12:58.454+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:12:58.454+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:12:58.486+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:12:58.485+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:12:58.486+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:12:58.558+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T18:14:55.380+0530] {processor.py:161} INFO - Started process (PID=25388) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:14:55.382+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:14:55.382+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:14:55.382+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:14:55.413+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:14:55.412+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:14:55.413+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:14:55.484+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.106 seconds
+[2025-05-27T18:16:39.627+0530] {processor.py:161} INFO - Started process (PID=25444) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:16:39.629+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:16:39.629+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:16:39.629+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:16:39.660+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:16:39.659+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:16:39.660+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:16:39.738+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.112 seconds
+[2025-05-27T18:18:21.244+0530] {processor.py:161} INFO - Started process (PID=25500) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:18:21.245+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:18:21.246+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:18:21.246+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:18:21.275+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:18:21.274+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:18:21.275+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:18:21.350+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T18:23:10.780+0530] {processor.py:161} INFO - Started process (PID=25719) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:23:10.781+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:23:10.782+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:10.782+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:23:10.814+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:10.813+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:23:10.815+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:23:10.886+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T18:28:25.860+0530] {processor.py:161} INFO - Started process (PID=25890) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:28:25.862+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:28:25.863+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:25.863+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:28:25.895+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:25.894+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:28:25.895+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:28:25.968+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.109 seconds
+[2025-05-27T18:30:18.423+0530] {processor.py:161} INFO - Started process (PID=25952) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:30:18.424+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:30:18.424+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:30:18.424+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:30:18.456+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:30:18.454+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:30:18.456+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:30:18.528+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T18:32:08.401+0530] {processor.py:161} INFO - Started process (PID=26013) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:32:08.402+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:32:08.402+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:32:08.402+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:32:08.436+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:32:08.434+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:32:08.437+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:32:08.509+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.110 seconds
+[2025-05-27T18:37:55.409+0530] {processor.py:161} INFO - Started process (PID=26235) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:37:55.410+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:37:55.411+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:37:55.411+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:37:55.443+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:37:55.442+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:37:55.443+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:37:55.518+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.110 seconds
+[2025-05-27T18:47:44.336+0530] {processor.py:161} INFO - Started process (PID=26747) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:47:44.338+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:47:44.339+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:47:44.339+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:47:44.373+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:47:44.371+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:47:44.373+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:47:44.447+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.112 seconds
+[2025-05-27T18:49:40.429+0530] {processor.py:161} INFO - Started process (PID=26829) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:49:40.430+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:49:40.431+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:49:40.431+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:49:40.461+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:49:40.460+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:49:40.462+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:49:40.532+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.104 seconds
+[2025-05-27T18:51:36.784+0530] {processor.py:161} INFO - Started process (PID=26913) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:51:36.785+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:51:36.786+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:51:36.786+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:51:36.824+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:51:36.823+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:51:36.825+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:51:36.902+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.119 seconds
+[2025-05-27T18:53:33.615+0530] {processor.py:161} INFO - Started process (PID=26974) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:53:33.616+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:53:33.617+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:53:33.616+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:53:33.649+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:53:33.648+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:53:33.650+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:53:33.727+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.114 seconds
+[2025-05-27T18:55:41.012+0530] {processor.py:161} INFO - Started process (PID=27041) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:55:41.014+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:55:41.015+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:55:41.015+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:55:41.049+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:55:41.048+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:55:41.049+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:55:41.136+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.126 seconds
+[2025-05-27T18:57:44.464+0530] {processor.py:161} INFO - Started process (PID=27138) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:57:44.465+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T18:57:44.466+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:57:44.466+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:57:44.496+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:57:44.495+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T18:57:44.497+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T18:57:44.567+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.105 seconds
+[2025-05-27T19:01:55.998+0530] {processor.py:161} INFO - Started process (PID=27309) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:01:55.999+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:01:56.000+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:01:56.000+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:01:56.031+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:01:56.029+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:01:56.031+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:01:56.102+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.105 seconds
+[2025-05-27T19:05:52.983+0530] {processor.py:161} INFO - Started process (PID=27429) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:05:52.984+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:05:52.985+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:05:52.984+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:05:53.017+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:05:53.015+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:05:53.017+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:05:53.093+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.112 seconds
+[2025-05-27T19:08:07.995+0530] {processor.py:161} INFO - Started process (PID=27518) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:08:07.997+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:08:07.997+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:08:07.997+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:08:08.027+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:08:08.025+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:08:08.027+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:08:08.098+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.104 seconds
+[2025-05-27T19:09:49.491+0530] {processor.py:161} INFO - Started process (PID=27580) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:09:49.492+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:09:49.493+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:09:49.493+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:09:49.521+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:09:49.520+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:09:49.521+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:09:49.591+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.101 seconds
+[2025-05-27T19:11:30.772+0530] {processor.py:161} INFO - Started process (PID=27634) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:11:30.772+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:11:30.773+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:11:30.773+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:11:30.802+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:11:30.800+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:11:30.803+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:11:30.872+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.102 seconds
+[2025-05-27T19:13:10.978+0530] {processor.py:161} INFO - Started process (PID=27686) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:13:10.978+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:13:10.979+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:13:10.979+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:13:11.006+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:13:11.005+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:13:11.006+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:13:11.075+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.098 seconds
+[2025-05-27T19:14:51.566+0530] {processor.py:161} INFO - Started process (PID=27737) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:14:51.567+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:14:51.568+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:14:51.567+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:14:51.597+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:14:51.595+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:14:51.597+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:14:51.666+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.101 seconds
+[2025-05-27T19:16:31.483+0530] {processor.py:161} INFO - Started process (PID=27792) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:16:31.484+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:16:31.484+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:16:31.484+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:16:31.512+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:16:31.511+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:16:31.513+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:16:31.582+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.101 seconds
+[2025-05-27T19:18:12.266+0530] {processor.py:161} INFO - Started process (PID=27845) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:18:12.266+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:18:12.267+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:18:12.267+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:18:12.295+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:18:12.293+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:18:12.295+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:18:12.363+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.099 seconds
+[2025-05-27T19:19:53.586+0530] {processor.py:161} INFO - Started process (PID=27932) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:19:53.587+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:19:53.587+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:19:53.587+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:19:53.616+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:19:53.614+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:19:53.616+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:19:53.685+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.100 seconds
+[2025-05-27T19:23:12.938+0530] {processor.py:161} INFO - Started process (PID=28048) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:23:12.938+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:23:12.939+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:23:12.939+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:23:12.968+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:23:12.966+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:23:12.968+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:23:13.038+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.101 seconds
+[2025-05-27T19:24:54.153+0530] {processor.py:161} INFO - Started process (PID=28102) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:24:54.154+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:24:54.154+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:24:54.154+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:24:54.182+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:24:54.181+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:24:54.182+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:24:54.248+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.097 seconds
+[2025-05-27T19:26:34.587+0530] {processor.py:161} INFO - Started process (PID=28154) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:26:34.588+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:26:34.589+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:26:34.588+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:26:34.616+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:26:34.615+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:26:34.616+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:26:34.683+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.097 seconds
+[2025-05-27T19:29:54.676+0530] {processor.py:161} INFO - Started process (PID=28260) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:29:54.677+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:29:54.678+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:29:54.678+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:29:54.705+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:29:54.704+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:29:54.706+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:29:54.774+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.099 seconds
+[2025-05-27T19:31:55.227+0530] {processor.py:161} INFO - Started process (PID=28343) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:31:55.228+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:31:55.229+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:31:55.228+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:31:55.258+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:31:55.256+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:31:55.258+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:31:55.327+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.101 seconds
+[2025-05-27T19:33:35.539+0530] {processor.py:161} INFO - Started process (PID=28394) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:33:35.540+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:33:35.541+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:33:35.541+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:33:35.570+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:33:35.568+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:33:35.571+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:33:35.641+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.103 seconds
+[2025-05-27T19:35:16.941+0530] {processor.py:161} INFO - Started process (PID=28447) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:35:16.942+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:35:16.943+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:35:16.943+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:35:16.971+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:35:16.969+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:35:16.972+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:35:17.042+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.102 seconds
+[2025-05-27T19:36:58.327+0530] {processor.py:161} INFO - Started process (PID=28501) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:36:58.328+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:36:58.329+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:36:58.329+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:36:58.357+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:36:58.355+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:36:58.357+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:36:58.425+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.098 seconds
+[2025-05-27T19:38:39.635+0530] {processor.py:161} INFO - Started process (PID=28550) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:38:39.636+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:38:39.637+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:38:39.637+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:38:39.665+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:38:39.663+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:38:39.666+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:38:39.735+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.101 seconds
+[2025-05-27T19:41:58.088+0530] {processor.py:161} INFO - Started process (PID=28656) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:41:58.089+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:41:58.089+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:41:58.089+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:41:58.118+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:41:58.116+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:41:58.119+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:41:58.190+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.103 seconds
+[2025-05-27T19:43:46.182+0530] {processor.py:161} INFO - Started process (PID=28724) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:43:46.184+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:43:46.185+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:43:46.184+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:43:46.218+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:43:46.217+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:43:46.219+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:43:46.301+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.121 seconds
+[2025-05-27T19:45:54.132+0530] {processor.py:161} INFO - Started process (PID=28854) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:45:54.133+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:45:54.134+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:45:54.134+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:45:54.165+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:45:54.163+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:45:54.165+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:45:54.237+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.107 seconds
+[2025-05-27T19:47:38.127+0530] {processor.py:161} INFO - Started process (PID=28920) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:47:38.128+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:47:38.128+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:47:38.128+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:47:38.157+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:47:38.156+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:47:38.158+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:47:38.227+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.102 seconds
+[2025-05-27T19:49:21.718+0530] {processor.py:161} INFO - Started process (PID=28973) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:49:21.719+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:49:21.719+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:49:21.719+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:49:21.749+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:49:21.748+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:49:21.749+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:49:21.820+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.103 seconds
+[2025-05-27T19:51:07.721+0530] {processor.py:161} INFO - Started process (PID=29054) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:51:07.721+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py for tasks to queue
+[2025-05-27T19:51:07.722+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:51:07.722+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:51:07.752+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:51:07.751+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py", line 138, in <module>
+    branching_venv = BranchPythonVirtualenvOperator(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/baseoperator.py", line 437, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/python.py", line 584, in __init__
+    raise AirflowException("PythonVirtualenvOperator requires virtualenv, please install it.")
+airflow.exceptions.AirflowException: PythonVirtualenvOperator requires virtualenv, please install it.
+[2025-05-27T19:51:07.752+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py
+[2025-05-27T19:51:07.824+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/example_dags/example_branch_operator.py took 0.104 seconds

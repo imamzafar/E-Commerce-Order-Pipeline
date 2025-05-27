@@ -1,4 +1,4 @@
-# $Id: universal.py 9037 2022-03-05 23:31:10Z milde $
+# $Id: universal.py 9320 2023-01-17 15:40:15Z milde $
 # Authors: David Goodger <goodger@python.org>; Ueli Schlaepfer; Günter Milde
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -120,13 +120,13 @@ class Messages(Transform):
     default_priority = 860
 
     def apply(self):
-        unfiltered = self.document.transform_messages
-        messages = [msg for msg in unfiltered if not msg.parent]
-        if messages:
+        messages = self.document.transform_messages
+        loose_messages = [msg for msg in messages if not msg.parent]
+        if loose_messages:
             section = nodes.section(classes=['system-messages'])
             # @@@ get this from the language module?
             section += nodes.title('', 'Docutils System Messages')
-            section += messages
+            section += loose_messages
             self.document.transform_messages[:] = []
             self.document += section
 
@@ -153,7 +153,7 @@ class FilterMessages(Transform):
             if node['level'] < self.document.reporter.report_level:
                 node.parent.remove(node)
                 try:  # also remove id-entry
-                    del(self.document.ids[node['ids'][0]])
+                    del self.document.ids[node['ids'][0]]
                 except (IndexError):
                     pass
         for node in tuple(self.document.findall(nodes.problematic)):
@@ -171,6 +171,9 @@ class TestMessages(Transform):
 
     Used for testing purposes.
     """
+
+    # marker for pytest to ignore this class during test discovery
+    __test__ = False
 
     default_priority = 880
 

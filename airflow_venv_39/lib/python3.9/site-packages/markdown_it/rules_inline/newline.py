@@ -1,17 +1,12 @@
-# Proceess '\n'
-import re
-
-from ..common.utils import charCodeAt, isSpace
+"""Proceess '\n'."""
+from ..common.utils import charStrAt, isStrSpace
 from .state_inline import StateInline
 
-endSpace = re.compile(r" +$")
 
-
-def newline(state: StateInline, silent: bool):
+def newline(state: StateInline, silent: bool) -> bool:
     pos = state.pos
 
-    # /* \n */
-    if state.srcCharCode[pos] != 0x0A:
+    if state.src[pos] != "\n":
         return False
 
     pmax = len(state.pending) - 1
@@ -22,9 +17,14 @@ def newline(state: StateInline, silent: bool):
     # Pending string is stored in concat mode, indexed lookups will cause
     # conversion to flat mode.
     if not silent:
-        if pmax >= 0 and charCodeAt(state.pending, pmax) == 0x20:
-            if pmax >= 1 and charCodeAt(state.pending, pmax - 1) == 0x20:
-                state.pending = endSpace.sub("", state.pending)
+        if pmax >= 0 and charStrAt(state.pending, pmax) == " ":
+            if pmax >= 1 and charStrAt(state.pending, pmax - 1) == " ":
+                # Find whitespaces tail of pending chars.
+                ws = pmax - 1
+                while ws >= 1 and charStrAt(state.pending, ws - 1) == " ":
+                    ws -= 1
+                state.pending = state.pending[:ws]
+
                 state.push("hardbreak", "br", 0)
             else:
                 state.pending = state.pending[:-1]
@@ -36,7 +36,7 @@ def newline(state: StateInline, silent: bool):
     pos += 1
 
     # skip heading spaces for next line
-    while pos < maximum and isSpace(state.srcCharCode[pos]):
+    while pos < maximum and isStrSpace(state.src[pos]):
         pos += 1
 
     state.pos = pos

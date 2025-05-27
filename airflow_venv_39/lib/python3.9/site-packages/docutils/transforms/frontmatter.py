@@ -1,4 +1,4 @@
-# $Id: frontmatter.py 9030 2022-03-05 23:28:32Z milde $
+# $Id: frontmatter.py 9351 2023-04-17 20:26:33Z milde $
 # Author: David Goodger, Ueli Schlaepfer <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -23,7 +23,7 @@ __docformat__ = 'reStructuredText'
 
 import re
 
-from docutils import nodes, utils
+from docutils import nodes, parsers, utils
 from docutils.transforms import TransformError, Transform
 
 
@@ -451,24 +451,42 @@ class DocInfo(Transform):
     def check_empty_biblio_field(self, field, name):
         if len(field[-1]) < 1:
             field[-1] += self.document.reporter.warning(
-                  'Cannot extract empty bibliographic field "%s".' % name,
+                  f'Cannot extract empty bibliographic field "{name}".',
                   base_node=field)
-            return None
-        return 1
+            return False
+        return True
 
     def check_compound_biblio_field(self, field, name):
-        if len(field[-1]) > 1:
-            field[-1] += self.document.reporter.warning(
-                  'Cannot extract compound bibliographic field "%s".' % name,
-                  base_node=field)
-            return None
-        if not isinstance(field[-1][0], nodes.paragraph):
-            field[-1] += self.document.reporter.warning(
-                  'Cannot extract bibliographic field "%s" containing '
-                  'anything other than a single paragraph.' % name,
-                  base_node=field)
-            return None
-        return 1
+        # Check that the `field` body contains a single paragraph
+        # (i.e. it must *not* be a compound element).
+        f_body = field[-1]
+        if len(f_body) == 1 and isinstance(f_body[0], nodes.paragraph):
+            return True
+        # Restore single author name with initial (E. Xampl) parsed as
+        # enumerated list
+        # https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#enumerated-lists
+        if (isinstance(f_body[0], nodes.enumerated_list)
+            and '\n' not in f_body.rawsource.strip()):
+            # parse into a dummy document and use created nodes
+            _document = utils.new_document('*DocInfo transform*',
+                                           field.document.settings)
+            parser = parsers.rst.Parser()
+            parser.parse('\\'+f_body.rawsource, _document)
+            if (len(_document.children) == 1
+                and isinstance(_document.children[0], nodes.paragraph)):
+                f_body.children = _document.children
+                return True
+        # Check failed, add a warning
+        content = [f'<{e.tagname}>' for e in f_body.children]
+        if len(content) > 1:
+            content = '[' + ', '.join(content) + ']'
+        else:
+            content = 'a ' + content[0]
+        f_body += self.document.reporter.warning(
+                      f'Bibliographic field "{name}"\nmust contain '
+                      f'a single <paragraph>, not {content}.',
+                      base_node=field)
+        return False
 
     rcs_keyword_substitutions = [
           (re.compile(r'\$' r'Date: (\d\d\d\d)[-/](\d\d)[-/](\d\d)[ T][\d:]+'
@@ -495,13 +513,15 @@ class DocInfo(Transform):
                 raise TransformError
         except TransformError:
             field[-1] += self.document.reporter.warning(
-                  'Bibliographic field "%s" incompatible with extraction: '
-                  'it must contain either a single paragraph (with authors '
-                  'separated by one of "%s"), multiple paragraphs (one per '
-                  'author), or a bullet list with one paragraph (one author) '
-                  'per item.'
-                  % (name, ''.join(self.language.author_separators)),
-                  base_node=field)
+                f'Cannot extract "{name}" from bibliographic field:\n'
+                f'Bibliographic field "{name}" must contain either\n'
+                ' a single paragraph (with author names separated by one of '
+                f'"{"".join(self.language.author_separators)}"),\n'
+                ' multiple paragraphs (one per author),\n'
+                ' or a bullet list with one author name per item.\n'
+                'Note: Leading initials can cause (mis)recognizing names '
+                'as enumerated list.',
+                base_node=field)
             raise
 
     def authors_from_one_paragraph(self, field):

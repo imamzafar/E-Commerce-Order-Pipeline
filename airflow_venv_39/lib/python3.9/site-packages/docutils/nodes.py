@@ -1,4 +1,4 @@
-# $Id: nodes.py 9067 2022-06-10 11:08:46Z milde $
+# $Id: nodes.py 9310 2022-12-17 12:17:32Z milde $
 # Author: David Goodger <goodger@python.org>
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -323,13 +323,6 @@ class Node:
             return next(self.findall(condition, include_self,
                                      descend, siblings, ascend))
         except StopIteration:
-            return None
-
-    def previous_sibling(self):
-        """Return preceding sibling node or ``None``."""
-        try:
-            return self.parent[self.parent.index(self)-1]
-        except (AttributeError, IndexError):
             return None
 
 
@@ -740,6 +733,14 @@ class Element(Node):
     def index(self, item, start=0, stop=sys.maxsize):
         return self.children.index(item, start, stop)
 
+    def previous_sibling(self):
+        """Return preceding sibling node or ``None``."""
+        try:
+            i = self.parent.index(self)
+        except (AttributeError):
+            return None
+        return self.parent[i-1] if i > 0 else None
+
     def is_not_default(self, key):
         if self[key] == [] and key in self.list_attributes:
             return 0
@@ -1067,7 +1068,7 @@ class Element(Node):
     def set_class(self, name):
         """Add a new class to the "classes" attribute."""
         warnings.warn('docutils.nodes.Element.set_class() is deprecated; '
-                      ' and will be removed in Docutils 0.21 or later.',
+                      ' and will be removed in Docutils 0.21 or later.'
                       "Append to Element['classes'] list attribute directly",
                       DeprecationWarning, stacklevel=2)
         assert ' ' not in name

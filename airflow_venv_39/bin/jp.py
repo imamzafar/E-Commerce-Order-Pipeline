@@ -1,4 +1,4 @@
-#!/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3
+#!/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3.9
 
 import sys
 import json

@@ -1,5 +1,5 @@
 # sql/elements.py
-# Copyright (C) 2005-2023 the SQLAlchemy authors and contributors
+# Copyright (C) 2005-2024 the SQLAlchemy authors and contributors
 # <see AUTHORS file>
 #
 # This module is part of SQLAlchemy and is released under
@@ -849,6 +849,9 @@ class ColumnElement(
             )
         else:
             return comparator_factory(self)
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
 
     def __getattr__(self, key):
         try:

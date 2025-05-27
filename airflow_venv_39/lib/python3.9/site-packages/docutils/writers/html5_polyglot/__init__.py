@@ -1,4 +1,4 @@
-# $Id: __init__.py 9057 2022-05-06 10:30:25Z milde $
+# $Id: __init__.py 9272 2022-11-24 20:28:40Z milde $
 # :Author: Günter Milde <milde@users.sf.net>
 #          Based on the html4css1 writer by David Goodger.
 # :Maintainer: docutils-develop@lists.sourceforge.net
@@ -27,7 +27,7 @@ the style sheet "plain.css" improves reading experience.
 __docformat__ = 'reStructuredText'
 
 import mimetypes
-import os.path
+from pathlib import Path
 
 from docutils import frontend, nodes
 from docutils.writers import _html_base
@@ -39,9 +39,8 @@ class Writer(_html_base.Writer):
     """Formats this writer supports."""
 
     default_stylesheets = ['minimal.css', 'plain.css']
-    default_stylesheet_dirs = ['.', os.path.abspath(os.path.dirname(__file__))]
-    default_template = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), 'template.txt')
+    default_stylesheet_dirs = ['.', str(Path(__file__).parent)]
+    default_template = Path(__file__).parent / 'template.txt'
 
     # use a copy of the parent spec with some modifications
     settings_spec = frontend.filter_settings_spec(
@@ -121,9 +120,14 @@ class HTMLTranslator(_html_base.HTMLTranslator):
     and examples.
     """
 
-    # meta tag to fix rendering in mobile browsers
-    viewport = ('<meta name="viewport" '
-                'content="width=device-width, initial-scale=1" />\n')
+    # self.starttag() arguments for the main document
+    documenttag_args = {'tagname': 'main'}
+
+    # add meta tag to fix rendering in mobile browsers
+    def __init__(self, document):
+        super().__init__(document)
+        self.meta.append('<meta name="viewport" '
+                         'content="width=device-width, initial-scale=1" />\n')
 
     # <acronym> tag obsolete in HTML5. Use the <abbr> tag instead.
     def visit_acronym(self, node):
@@ -138,8 +142,8 @@ class HTMLTranslator(_html_base.HTMLTranslator):
     def visit_authors(self, node):
         self.visit_docinfo_item(node, 'authors', meta=False)
         for subnode in node:
-            self.add_meta('<meta name="author" content="%s" />\n' %
-                          self.attval(subnode.astext()))
+            self.meta.append('<meta name="author" content='
+                             f'"{self.attval(subnode.astext())}" />\n')
 
     def depart_authors(self, node):
         self.depart_docinfo_item()
@@ -178,8 +182,8 @@ class HTMLTranslator(_html_base.HTMLTranslator):
     # see https://wiki.whatwg.org/wiki/MetaExtensions
     def visit_copyright(self, node):
         self.visit_docinfo_item(node, 'copyright', meta=False)
-        self.add_meta('<meta name="dcterms.rights" content="%s" />\n'
-                      % self.attval(node.astext()))
+        self.meta.append('<meta name="dcterms.rights" '
+                         f'content="{self.attval(node.astext())}" />\n')
 
     def depart_copyright(self, node):
         self.depart_docinfo_item()
@@ -187,43 +191,11 @@ class HTMLTranslator(_html_base.HTMLTranslator):
     # no standard meta tag name in HTML5, use dcterms.date
     def visit_date(self, node):
         self.visit_docinfo_item(node, 'date', meta=False)
-        self.add_meta('<meta name="dcterms.date" content="%s" />\n'
-                      % self.attval(node.astext()))
+        self.meta.append('<meta name="dcterms.date" '
+                         f'content="{self.attval(node.astext())}" />\n')
 
     def depart_date(self, node):
         self.depart_docinfo_item()
-
-    def visit_document(self, node):
-        title = (node.get('title', '') or os.path.basename(node['source'])
-                 or 'untitled Docutils document')
-        self.head.append(f'<title>{self.encode(title)}</title>\n')
-
-    def depart_document(self, node):
-        self.head_prefix.extend([self.doctype,
-                                 self.head_prefix_template %
-                                 {'lang': self.settings.language_code}])
-        self.html_prolog.append(self.doctype)
-        self.meta.insert(0, self.viewport)
-        self.head.insert(0, self.viewport)
-        self.meta.insert(0, self.content_type % self.settings.output_encoding)
-        self.head.insert(0, self.content_type % self.settings.output_encoding)
-        if 'name="dcterms.' in ''.join(self.meta):
-            self.head.append('<link rel="schema.dcterms"'
-                             ' href="http://purl.org/dc/terms/"/>')
-        if self.math_header:
-            if self.math_output == 'mathjax':
-                self.head.extend(self.math_header)
-            else:
-                self.stylesheet.extend(self.math_header)
-        # skip content-type meta tag with interpolated charset value:
-        self.html_head.extend(self.head[1:])
-        self.body_prefix.append(self.starttag(node, 'main'))
-        self.body_suffix.insert(0, '</main>\n')
-        self.fragment.extend(self.body)  # self.fragment is the "naked" body
-        self.html_body.extend(self.body_prefix[1:] + self.body_pre_docinfo
-                              + self.docinfo + self.body
-                              + self.body_suffix[:-1])
-        assert not self.context, f'len(context) = {len(self.context)}'
 
     # use new HTML5 <figure> and <figcaption> elements
     def visit_figure(self, node):
@@ -319,7 +291,7 @@ class HTMLTranslator(_html_base.HTMLTranslator):
               and isinstance(node.parent, nodes.literal_block)
               and 'code' in node.parent.get('classes')):
             if self.body[-1] == '<code>':
-                del(self.body[-1])
+                del self.body[-1]
             else:
                 self.body.append('</code>')
             node.html5tagname = 'small'
@@ -384,8 +356,8 @@ class HTMLTranslator(_html_base.HTMLTranslator):
     def visit_meta(self, node):
         if node.hasattr('lang'):
             node['xml:lang'] = node['lang']
-        meta = self.emptytag(node, 'meta', **node.non_default_attributes())
-        self.add_meta(meta)
+        self.meta.append(self.emptytag(node, 'meta',
+                                       **node.non_default_attributes()))
 
     def depart_meta(self, node):
         pass
@@ -424,7 +396,7 @@ class HTMLTranslator(_html_base.HTMLTranslator):
         atts = {'classes': ['topic']}
         if 'contents' in node['classes']:
             node.html_tagname = 'nav'
-            del(atts['classes'])
+            del atts['classes']
             if isinstance(node.parent, nodes.document):
                 atts['role'] = 'doc-toc'
                 self.body_prefix[0] = '</head>\n<body class="with-toc">\n'

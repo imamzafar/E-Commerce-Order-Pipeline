@@ -1,7 +1,7 @@
 - package: markdown-it/markdown-it
-  version: 12.2.0
-  commit: 6e2de08a0b03d3d0dcc524b89710ce05f83a0283
-  date: Aug 2, 2021
+  version: 13.0.1
+  commit: e843acc9edad115cbf8cf85e676443f01658be08
+  date: May 3, 2022
   notes:
     - Rename variables that use python built-in names, e.g.
       - `max` -> `maximum`
@@ -23,8 +23,7 @@
       to manipulate `Token.attrs`, which have an identical signature to those upstream.
     - Use python version of `charCodeAt`
     - |
-      Reduce use of charCodeAt() by storing char codes in a srcCharCodes attribute for state
-      objects and sharing those whenever possible
+      Use `str` units instead of `int`s to represent Unicode codepoints.
       This provides a significant performance boost
     - |
       In markdown_it/rules_block/reference.py,

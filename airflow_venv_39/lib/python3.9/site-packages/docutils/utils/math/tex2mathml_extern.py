@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# :Id: $Id: tex2mathml_extern.py 9068 2022-06-13 12:05:08Z milde $
+# :Id: $Id: tex2mathml_extern.py 9250 2022-11-16 14:01:31Z milde $
 # :Copyright: © 2015 Günter Milde.
 # :License: Released under the terms of the `2-Clause BSD license`_, in short:
 #
@@ -33,7 +32,8 @@ def latexml(math_code, reporter=None):
     """
     p = subprocess.Popen(['latexml',
                           '-',  # read from stdin
-                          # '--preload=amsmath',
+                          '--preload=amsfonts',
+                          '--preload=amsmath',
                           '--inputencoding=utf8',
                           ],
                          stdin=subprocess.PIPE,
@@ -117,7 +117,7 @@ def blahtexml(math_code, inline=True, reporter=None):
     if inline:
         mathmode_arg = ''
     else:
-        mathmode_arg = 'mode="display"'
+        mathmode_arg = ' display="block"'
         options.append('--displaymath')
 
     p = subprocess.Popen(['blahtexml']+options,
@@ -142,11 +142,44 @@ def blahtexml(math_code, inline=True, reporter=None):
     return result
 
 
+def pandoc(math_code, reporter=None):
+    """Convert LaTeX math code to MathML with pandoc_
+
+    .. _pandoc: https://pandoc.org/
+    """
+    p = subprocess.Popen(['pandoc',
+                          '--mathml',
+                          '--from=latex',
+                          ],
+                         stdin=subprocess.PIPE,
+                         stdout=subprocess.PIPE,
+                         stderr=subprocess.PIPE,
+                         close_fds=True)
+    p.stdin.write(math_code.encode('utf-8'))
+    p.stdin.close()
+    result = p.stdout.read().decode('utf-8')
+    err = p.stderr.read().decode('utf-8').strip()
+    x = p.wait()
+
+    if err:
+        if reporter:
+            reporter.error(err)
+        raise SyntaxError('\nError message from external converter pandoc:\n%s'
+                          % err)
+    if x != 0:
+        raise SyntaxError('\nError code from external converter pandoc:\n%s'
+                          % x)
+
+    start, end = result.find('<math'), result.find('</math>')+7
+    return result[start:end]
+
+
 # self-test
 
 if __name__ == "__main__":
     example = ('\\frac{\\partial \\sin^2(\\alpha)}{\\partial \\vec r}'
-               '\\varpi \\, \\text{Grüße}')
-    # print(latexml(example).encode('utf-8'))
-    # print(ttm(example))
-    print(blahtexml(example).encode('utf-8'))
+               '\\varpi \\mathbb{R} \\, \\text{Grüße}')
+    # print(latexml('$'+example+'$'))
+    # print(ttm('$'+example.replace('\\mathbb{R}', '')+'$'))
+    print(blahtexml(example))
+    # print(pandoc('$'+example+'$'))

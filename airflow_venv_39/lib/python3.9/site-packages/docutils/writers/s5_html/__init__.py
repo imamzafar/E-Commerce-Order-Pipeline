@@ -1,4 +1,4 @@
-# $Id: __init__.py 9072 2022-06-15 11:31:09Z milde $
+# $Id: __init__.py 9240 2022-11-13 16:15:23Z milde $
 # Authors: Chris Liechti <cliechti@gmx.net>;
 #          David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
@@ -164,7 +164,7 @@ class S5HTMLTranslator(html4css1.HTMLTranslator):
                                   'control_visibility': control_visibility})
         if not self.document.settings.current_slide:
             self.stylesheet.append(self.disable_current_slide)
-        self.add_meta('<meta name="version" content="S5 1.1" />\n')
+        self.meta.append('<meta name="version" content="S5 1.1" />\n')
         self.s5_footer = []
         self.s5_header = []
         self.section_count = 0
@@ -282,8 +282,7 @@ class S5HTMLTranslator(html4css1.HTMLTranslator):
                                  self.head_prefix_template %
                                  {'lang': self.settings.language_code}])
         self.html_prolog.append(self.doctype)
-        self.meta.insert(0, self.content_type % self.settings.output_encoding)
-        self.head.insert(0, self.content_type % self.settings.output_encoding)
+        self.head = self.meta[:] + self.head
         if self.math_header:
             if self.math_output == 'mathjax':
                 self.head.extend(self.math_header)

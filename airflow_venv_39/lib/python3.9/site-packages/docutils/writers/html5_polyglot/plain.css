@@ -2,7 +2,7 @@
 /* Rules for easy reading and pre-defined style variants.                  */
 /*                                                                         */
 /* :Author: Günter Milde, based on html4css1.css by David Goodger          */
-/* :Id: $Id: plain.css 9081 2022-06-19 20:23:12Z milde $                                                               */
+/* :Id: $Id: plain.css 9338 2023-04-08 21:08:47Z milde $                                                               */
 /* :Copyright: © 2015 Günter Milde.                                        */
 /* :License: Released under the terms of the `2-Clause BSD license`_,      */
 /*    in short:                                                            */
@@ -281,7 +281,8 @@ math .boldsymbol {
   font-weight: bold;
 }
 mstyle.mathscr, mi.mathscr {
-  font-family: STIX;
+  font-family: STIX, XITSMathJax_Script, rsfs10,
+               "Asana Math", Garamond, cursive;
 }
 
 /* Epigraph           */

@@ -8,7 +8,7 @@ from ..common.utils import charCodeAt, unescapeAll
 class _Result:
     __slots__ = ("ok", "pos", "lines", "str")
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.ok = False
         self.pos = 0
         self.lines = 0
@@ -49,7 +49,7 @@ def parseLinkDestination(string: str, pos: int, maximum: int) -> _Result:
     while pos < maximum:
         code = charCodeAt(string, pos)
 
-        if code == 0x20:
+        if code is None or code == 0x20:
             break
 
         # ascii control characters

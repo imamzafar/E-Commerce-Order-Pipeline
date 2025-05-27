@@ -1,4 +1,4 @@
-# $Id: da.py 9030 2022-03-05 23:28:32Z milde $
+# $Id: da.py 9116 2022-07-28 17:06:51Z milde $
 # Author: E D
 # Copyright: This module has been placed in the public domain.
 
@@ -29,7 +29,7 @@ directives = {
       'bemærk': 'note',
       'tips': 'tip',
       'advarsel': 'warning',
-      'formaning': 'admonition',
+      'formaning': 'admonition',  # sic! Not used in this sense in rST.
       'sidebjælke': 'sidebar',
       'emne': 'topic',
       'linje-blok': 'line-block',

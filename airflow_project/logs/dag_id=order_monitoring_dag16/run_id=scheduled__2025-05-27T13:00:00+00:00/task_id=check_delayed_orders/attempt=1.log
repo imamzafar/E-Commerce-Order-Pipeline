@@ -1,0 +1,33 @@
+[2025-05-27T19:30:16.454+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: order_monitoring_dag16.check_delayed_orders scheduled__2025-05-27T13:00:00+00:00 [queued]>
+[2025-05-27T19:30:16.459+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: order_monitoring_dag16.check_delayed_orders scheduled__2025-05-27T13:00:00+00:00 [queued]>
+[2025-05-27T19:30:16.459+0530] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-05-27T19:30:16.468+0530] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): check_delayed_orders> on 2025-05-27 13:00:00+00:00
+[2025-05-27T19:30:16.474+0530] {standard_task_runner.py:60} INFO - Started process 28283 to run task
+[2025-05-27T19:30:16.480+0530] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'order_monitoring_dag16', 'check_delayed_orders', 'scheduled__2025-05-27T13:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/order_monitoring_dag.py', '--cfg-path', '/var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T/tmpwk5qisyt']
+[2025-05-27T19:30:16.481+0530] {standard_task_runner.py:88} INFO - Job 30: Subtask check_delayed_orders
+[2025-05-27T19:30:16.520+0530] {task_command.py:423} INFO - Running <TaskInstance: order_monitoring_dag16.check_delayed_orders scheduled__2025-05-27T13:00:00+00:00 [running]> on host zafars-macbook-pro.local
+[2025-05-27T19:30:16.564+0530] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='imamzafar100@gmail.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='order_monitoring_dag16' AIRFLOW_CTX_TASK_ID='check_delayed_orders' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T13:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-27T13:00:00+00:00'
+[2025-05-27T19:30:16.565+0530] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T
+[2025-05-27T19:30:16.566+0530] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'source "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/activate" && python "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/utils/check_delayed_orders.py"']
+[2025-05-27T19:30:16.571+0530] {subprocess.py:86} INFO - Output:
+[2025-05-27T19:30:19.001+0530] {subprocess.py:93} INFO - ✅ Running Snowflake delayed orders check...
+[2025-05-27T19:30:19.002+0530] {subprocess.py:93} INFO - ✅ Python path: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python
+[2025-05-27T19:30:19.002+0530] {subprocess.py:93} INFO - ✅ Snowflake connector version: 3.15.0
+[2025-05-27T19:30:19.003+0530] {subprocess.py:93} INFO - ✅ Connected to Snowflake
+[2025-05-27T19:30:19.003+0530] {subprocess.py:93} INFO - ✅ Query Result: (2,)
+[2025-05-27T19:30:19.004+0530] {subprocess.py:93} INFO - ❌ Error: 2 delayed orders found.
+[2025-05-27T19:30:19.055+0530] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-27T19:30:19.063+0530] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-27T19:30:19.066+0530] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=order_monitoring_dag16, task_id=check_delayed_orders, execution_date=20250527T130000, start_date=20250527T140016, end_date=20250527T140019
+[2025-05-27T19:30:19.086+0530] {logging_mixin.py:188} WARNING - /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py:154 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2025-05-27T19:30:19.087+0530] {email.py:270} INFO - Email alerting: attempt 1
+[2025-05-27T19:30:21.875+0530] {email.py:281} INFO - Sent an alert email to ['imamzafar100@gmail.com']
+[2025-05-27T19:30:23.825+0530] {standard_task_runner.py:107} ERROR - Failed to execute job 30 for task check_delayed_orders (Bash command failed. The command returned a non-zero exit code 1.; 28283)
+[2025-05-27T19:30:23.871+0530] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-27T19:30:23.883+0530] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

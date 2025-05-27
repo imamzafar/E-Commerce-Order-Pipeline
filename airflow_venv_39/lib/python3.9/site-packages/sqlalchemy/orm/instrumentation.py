@@ -1,5 +1,5 @@
 # orm/instrumentation.py
-# Copyright (C) 2005-2023 the SQLAlchemy authors and contributors
+# Copyright (C) 2005-2024 the SQLAlchemy authors and contributors
 # <see AUTHORS file>
 #
 # This module is part of SQLAlchemy and is released under
@@ -199,7 +199,7 @@ class ClassManager(HasMemoized, dict):
         return frozenset([attr.impl for attr in self.values()])
 
     @util.memoized_property
-    def mapper(self):
+    def mapper(self):  # noqa: F811
         # raises unless self.mapper has been assigned
         raise exc.UnmappedClassError(self.class_)
 

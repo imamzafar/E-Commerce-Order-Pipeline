@@ -1,4 +1,4 @@
-# $Id: docutils_xml.py 9038 2022-03-05 23:31:46Z milde $
+# $Id: docutils_xml.py 9239 2022-11-13 16:14:59Z milde $
 # Author: David Goodger, Paul Tremblay, Guenter Milde
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -14,7 +14,7 @@ from io import StringIO
 import xml.sax.saxutils
 
 import docutils
-from docutils import frontend, writers, nodes
+from docutils import frontend, nodes, writers, utils
 
 
 class RawXmlError(docutils.ApplicationError):
@@ -64,7 +64,6 @@ class Writer(writers.Writer):
 
 class XMLTranslator(nodes.GenericNodeVisitor):
 
-    xml_declaration = '<?xml version="1.0" encoding="%s"?>\n'
     # TODO: add stylesheet options similar to HTML and LaTeX writers?
     # xml_stylesheet = '<?xml-stylesheet type="text/xsl" href="%s"?>\n'
     doctype = (
@@ -100,8 +99,7 @@ class XMLTranslator(nodes.GenericNodeVisitor):
         # Output
         self.output = []
         if settings.xml_declaration:
-            self.output.append(
-                self.xml_declaration % settings.output_encoding)
+            self.output.append(utils.xml_declaration(settings.output_encoding))
         if settings.doctype_declaration:
             self.output.append(self.doctype)
         self.output.append(self.generator % docutils.__version__)

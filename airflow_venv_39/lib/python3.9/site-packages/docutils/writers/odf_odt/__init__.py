@@ -1,4 +1,4 @@
-# $Id: __init__.py 9072 2022-06-15 11:31:09Z milde $
+# $Id: __init__.py 9258 2022-11-21 14:51:43Z milde $
 # Author: Dave Kuhlman <dkuhlman@davekuhlman.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -3461,8 +3461,7 @@ class ODFTranslator(nodes.GenericNodeVisitor):
 class Reader(standalone.Reader):
 
     def get_transforms(self):
-        default = standalone.Reader.get_transforms(self)
-        if self.settings.create_links:
-            return default
-        return [i for i in default
-                if i is not references.DanglingReferences]
+        transforms = super().get_transforms()
+        if not self.settings.create_links:
+            transforms.remove(references.DanglingReferences)
+        return transforms

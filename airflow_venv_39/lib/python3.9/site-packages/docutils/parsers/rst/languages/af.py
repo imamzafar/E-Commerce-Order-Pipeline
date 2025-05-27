@@ -1,4 +1,4 @@
-# $Id: af.py 9030 2022-03-05 23:28:32Z milde $
+# $Id: af.py 9116 2022-07-28 17:06:51Z milde $
 # Author: Jannie Hofmeyr <jhsh@sun.ac.za>
 # Copyright: This module has been placed in the public domain.
 
@@ -26,7 +26,7 @@ directives = {
       'nota': 'note',
       'tip': 'tip',  # hint and tip both have the same translation: wenk
       'waarskuwing': 'warning',
-      'vermaning': 'admonition',
+      'vermaning': 'admonition',  # sic! Not used in this sense in rST.
       'kantstreep': 'sidebar',
       'onderwerp': 'topic',
       'lynblok': 'line-block',

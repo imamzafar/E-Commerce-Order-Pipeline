@@ -1,5 +1,5 @@
-# sqlite/base.py
-# Copyright (C) 2005-2023 the SQLAlchemy authors and contributors
+# dialects/sqlite/base.py
+# Copyright (C) 2005-2024 the SQLAlchemy authors and contributors
 # <see AUTHORS file>
 #
 # This module is part of SQLAlchemy and is released under
@@ -8,7 +8,7 @@
 r"""
 .. dialect:: sqlite
     :name: SQLite
-    :full_support: 3.21, 3.28+
+    :full_support: 3.36.0
     :normal_support: 3.12+
     :best_effort: 3.7.16+
 

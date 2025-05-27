@@ -1,4 +1,4 @@
-# $Id: manpage.py 9038 2022-03-05 23:31:46Z milde $
+# $Id: manpage.py 9206 2022-11-03 10:52:43Z aa-turner $
 # Author: Engelbert Gruber <grubert@users.sourceforge.net>
 # Copyright: This module is put into the public domain.
 
@@ -375,11 +375,14 @@ class Translator(nodes.NodeVisitor):
         self._list_char.pop()
 
     def header(self):
-        tmpl = (".TH \"%(title_upper)s\" %(manual_section)s"
-                " \"%(date)s\" \"%(version)s\" \"%(manual_group)s\"\n"
-                ".SH NAME\n"
-                "%(title)s \\- %(subtitle)s\n")
-        return tmpl % self._docinfo
+        th = (".TH \"%(title_upper)s\" %(manual_section)s"
+              " \"%(date)s\" \"%(version)s\"") % self._docinfo
+        if self._docinfo["manual_group"]:
+            th += " \"%(manual_group)s\"" % self._docinfo
+        th += "\n"
+        sh_tmpl = (".SH NAME\n"
+                   "%(title)s \\- %(subtitle)s\n")
+        return th + sh_tmpl % self._docinfo
 
     def append_header(self):
         """append header with .TH and .SH NAME"""

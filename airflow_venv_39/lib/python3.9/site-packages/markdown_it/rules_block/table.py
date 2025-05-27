@@ -1,14 +1,16 @@
 # GFM table, https://github.github.com/gfm/#tables-extension-
+from __future__ import annotations
+
 import re
 
-from ..common.utils import charCodeAt, isSpace
+from ..common.utils import charStrAt, isStrSpace
 from .state_block import StateBlock
 
 headerLineRe = re.compile(r"^:?-+:?$")
 enclosingPipesRe = re.compile(r"^\||\|$")
 
 
-def getLine(state: StateBlock, line: int):
+def getLine(state: StateBlock, line: int) -> str:
     pos = state.bMarks[line] + state.tShift[line]
     maximum = state.eMarks[line]
 
@@ -16,17 +18,17 @@ def getLine(state: StateBlock, line: int):
     return state.src[pos:maximum]
 
 
-def escapedSplit(string):
-    result = []
+def escapedSplit(string: str) -> list[str]:
+    result: list[str] = []
     pos = 0
     max = len(string)
     isEscaped = False
     lastPos = 0
     current = ""
-    ch = charCodeAt(string, pos)
+    ch = charStrAt(string, pos)
 
     while pos < max:
-        if ch == 0x7C:  # /* | */
+        if ch == "|":
             if not isEscaped:
                 # pipe separating cells, '|'
                 result.append(current + string[lastPos:pos])
@@ -37,17 +39,17 @@ def escapedSplit(string):
                 current += string[lastPos : pos - 1]
                 lastPos = pos
 
-        isEscaped = ch == 0x5C  # /* \ */
+        isEscaped = ch == "\\"
         pos += 1
 
-        ch = charCodeAt(string, pos)
+        ch = charStrAt(string, pos)
 
     result.append(current + string[lastPos:])
 
     return result
 
 
-def table(state: StateBlock, startLine: int, endLine: int, silent: bool):
+def table(state: StateBlock, startLine: int, endLine: int, silent: bool) -> bool:
     tbodyLines = None
 
     # should have at least two lines
@@ -59,8 +61,7 @@ def table(state: StateBlock, startLine: int, endLine: int, silent: bool):
     if state.sCount[nextLine] < state.blkIndent:
         return False
 
-    # if it's indented more than 3 spaces, it should be a code block
-    if state.sCount[nextLine] - state.blkIndent >= 4:
+    if state.is_code_block(nextLine):
         return False
 
     # first character of the second line should be '|', '-', ':',
@@ -70,29 +71,27 @@ def table(state: StateBlock, startLine: int, endLine: int, silent: bool):
     pos = state.bMarks[nextLine] + state.tShift[nextLine]
     if pos >= state.eMarks[nextLine]:
         return False
-    first_ch = state.srcCharCode[pos]
+    first_ch = state.src[pos]
     pos += 1
-    if first_ch not in {0x7C, 0x2D, 0x3A}:  # not in {"|", "-", ":"}
+    if first_ch not in ("|", "-", ":"):
         return False
 
     if pos >= state.eMarks[nextLine]:
         return False
-    second_ch = state.srcCharCode[pos]
+    second_ch = state.src[pos]
     pos += 1
-    # not in {"|", "-", ":"} and not space
-    if second_ch not in {0x7C, 0x2D, 0x3A} and not isSpace(second_ch):
+    if second_ch not in ("|", "-", ":") and not isStrSpace(second_ch):
         return False
 
     # if first character is '-', then second character must not be a space
     # (due to parsing ambiguity with list)
-    if first_ch == 0x2D and isSpace(second_ch):
+    if first_ch == "-" and isStrSpace(second_ch):
         return False
 
     while pos < state.eMarks[nextLine]:
-        ch = state.srcCharCode[pos]
+        ch = state.src[pos]
 
-        # /* | */  /* - */ /* : */
-        if ch not in {0x7C, 0x2D, 0x3A} and not isSpace(ch):
+        if ch not in ("|", "-", ":") and not isStrSpace(ch):
             return False
 
         pos += 1
@@ -113,10 +112,9 @@ def table(state: StateBlock, startLine: int, endLine: int, silent: bool):
 
         if not headerLineRe.search(t):
             return False
-        if charCodeAt(t, len(t) - 1) == 0x3A:  # /* : */
-            # /* : */
-            aligns.append("center" if charCodeAt(t, 0) == 0x3A else "right")
-        elif charCodeAt(t, 0) == 0x3A:  # /* : */
+        if charStrAt(t, len(t) - 1) == ":":
+            aligns.append("center" if charStrAt(t, 0) == ":" else "right")
+        elif charStrAt(t, 0) == ":":
             aligns.append("left")
         else:
             aligns.append("")
@@ -124,7 +122,7 @@ def table(state: StateBlock, startLine: int, endLine: int, silent: bool):
     lineText = getLine(state, startLine).strip()
     if "|" not in lineText:
         return False
-    if state.sCount[startLine] - state.blkIndent >= 4:
+    if state.is_code_block(startLine):
         return False
     columns = escapedSplit(lineText)
     if columns and columns[0] == "":
@@ -190,7 +188,7 @@ def table(state: StateBlock, startLine: int, endLine: int, silent: bool):
         lineText = getLine(state, nextLine).strip()
         if not lineText:
             break
-        if state.sCount[nextLine] - state.blkIndent >= 4:
+        if state.is_code_block(nextLine):
             break
         columns = escapedSplit(lineText)
         if columns and columns[0] == "":

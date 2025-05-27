@@ -1,0 +1,8 @@
+snowflake:
+  user: ZAFARIMAM
+  password: FarhatZaf@17!!
+  account: FOCSYGG-CE91513
+  warehouse: COMPUTE_WH
+  database: ecommerce_db
+  schema: analytics
+  role: ACCOUNTADMIN

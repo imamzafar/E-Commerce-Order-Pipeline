@@ -1,4 +1,4 @@
-# $Id: __init__.py 9037 2022-03-05 23:31:10Z milde $
+# $Id: __init__.py 9356 2023-04-18 23:50:48Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -334,7 +334,7 @@ def unicode_code(code):
 
 def single_char_or_unicode(argument):
     """
-    A single character is returned as-is.  Unicode characters codes are
+    A single character is returned as-is.  Unicode character codes are
     converted as in `unicode_code`.  (Directive option conversion function.)
     """
     char = unicode_code(argument)

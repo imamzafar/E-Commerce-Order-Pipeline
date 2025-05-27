@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 from collections import namedtuple
-from collections.abc import MutableMapping
 from dataclasses import dataclass
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any, Literal
 
 from .._compat import DATACLASS_KWARGS
 from ..common.utils import isMdAsciiPunct, isPunctChar, isWhiteSpace
 from ..ruler import StateBase
 from ..token import Token
+from ..utils import EnvType
 
 if TYPE_CHECKING:
     from markdown_it import MarkdownIt
@@ -21,14 +21,6 @@ class Delimiter:
 
     # Total length of these series of delimiters.
     length: int
-
-    # An amount of characters before this one that's equivalent to
-    # current one. In plain English: if this delimiter does not open
-    # an emphasis, neither do previous `jump` characters.
-    #
-    # Used to skip sequences like "*****" in one step, for 1st asterisk
-    # value will be 0, for 2nd it's 1 and so on.
-    jump: int
 
     # A position of the token this delimiter corresponds to.
     token: int
@@ -50,13 +42,13 @@ Scanned = namedtuple("Scanned", ["can_open", "can_close", "length"])
 
 class StateInline(StateBase):
     def __init__(
-        self, src: str, md: MarkdownIt, env: MutableMapping, outTokens: list[Token]
-    ):
+        self, src: str, md: MarkdownIt, env: EnvType, outTokens: list[Token]
+    ) -> None:
         self.src = src
         self.env = env
         self.md = md
         self.tokens = outTokens
-        self.tokens_meta: list[dict | None] = [None] * len(outTokens)
+        self.tokens_meta: list[dict[str, Any] | None] = [None] * len(outTokens)
 
         self.pos = 0
         self.posMax = len(self.src)
@@ -78,13 +70,17 @@ class StateInline(StateBase):
         self.backticks: dict[int, int] = {}
         self.backticksScanned = False
 
-    def __repr__(self):
+        # Counter used to disable inline linkify-it execution
+        # inside <a> and markdown links
+        self.linkLevel = 0
+
+    def __repr__(self) -> str:
         return (
             f"{self.__class__.__name__}"
             f"(pos=[{self.pos} of {self.posMax}], token={len(self.tokens)})"
         )
 
-    def pushPending(self):
+    def pushPending(self) -> Token:
         token = Token("text", "", 0)
         token.content = self.pending
         token.level = self.pendingLevel
@@ -92,7 +88,7 @@ class StateInline(StateBase):
         self.pending = ""
         return token
 
-    def push(self, ttype, tag, nesting):
+    def push(self, ttype: str, tag: str, nesting: Literal[-1, 0, 1]) -> Token:
         """Push new token to "stream".
         If pending text exists - flush it as text token
         """
@@ -121,7 +117,7 @@ class StateInline(StateBase):
         self.tokens_meta.append(token_meta)
         return token
 
-    def scanDelims(self, start, canSplitWord):
+    def scanDelims(self, start: int, canSplitWord: bool) -> Scanned:
         """
         Scan a sequence of emphasis-like markers, and determine whether
         it can start an emphasis sequence or end an emphasis sequence.
@@ -131,39 +127,34 @@ class StateInline(StateBase):
 
         """
         pos = start
-        left_flanking = True
-        right_flanking = True
         maximum = self.posMax
-        marker = self.srcCharCode[start]
+        marker = self.src[start]
 
         # treat beginning of the line as a whitespace
-        lastChar = self.srcCharCode[start - 1] if start > 0 else 0x20
+        lastChar = self.src[start - 1] if start > 0 else " "
 
-        while pos < maximum and self.srcCharCode[pos] == marker:
+        while pos < maximum and self.src[pos] == marker:
             pos += 1
 
         count = pos - start
 
         # treat end of the line as a whitespace
-        nextChar = self.srcCharCode[pos] if pos < maximum else 0x20
+        nextChar = self.src[pos] if pos < maximum else " "
 
-        isLastPunctChar = isMdAsciiPunct(lastChar) or isPunctChar(chr(lastChar))
-        isNextPunctChar = isMdAsciiPunct(nextChar) or isPunctChar(chr(nextChar))
+        isLastPunctChar = isMdAsciiPunct(ord(lastChar)) or isPunctChar(lastChar)
+        isNextPunctChar = isMdAsciiPunct(ord(nextChar)) or isPunctChar(nextChar)
 
-        isLastWhiteSpace = isWhiteSpace(lastChar)
-        isNextWhiteSpace = isWhiteSpace(nextChar)
+        isLastWhiteSpace = isWhiteSpace(ord(lastChar))
+        isNextWhiteSpace = isWhiteSpace(ord(nextChar))
 
-        if isNextWhiteSpace:
-            left_flanking = False
-        elif isNextPunctChar:
-            if not (isLastWhiteSpace or isLastPunctChar):
-                left_flanking = False
-
-        if isLastWhiteSpace:
-            right_flanking = False
-        elif isLastPunctChar:
-            if not (isNextWhiteSpace or isNextPunctChar):
-                right_flanking = False
+        left_flanking = not (
+            isNextWhiteSpace
+            or (isNextPunctChar and not (isLastWhiteSpace or isLastPunctChar))
+        )
+        right_flanking = not (
+            isLastWhiteSpace
+            or (isLastPunctChar and not (isNextWhiteSpace or isNextPunctChar))
+        )
 
         if not canSplitWord:
             can_open = left_flanking and ((not right_flanking) or isLastPunctChar)

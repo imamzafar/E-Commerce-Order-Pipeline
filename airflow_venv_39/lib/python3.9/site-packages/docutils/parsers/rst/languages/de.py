@@ -1,4 +1,4 @@
-# $Id: de.py 9030 2022-03-05 23:28:32Z milde $
+# $Id: de.py 9120 2022-09-13 10:24:30Z milde $
 # Authors: Engelbert Gruber <grubert@users.sourceforge.net>;
 #          Lea Wiemann <LeWiemann@gmail.com>
 # Copyright: This module has been placed in the public domain.
@@ -22,12 +22,13 @@ directives = {
       'code': 'code',
       'gefahr': 'danger',
       'fehler': 'error',
-      'hinweis': 'hint',
+      'hinweis': 'hint',  # Wink
       'wichtig': 'important',
       'notiz': 'note',
       'tipp': 'tip',
       'warnung': 'warning',
-      'ermahnung': 'admonition',
+      'ermahnung': 'admonition',  # sic! Not used in this sense in rST.
+      # TODO: Rat(schlag), Empfehlung, Warnhinweis, ...?
       'kasten': 'sidebar',
       'seitenkasten': 'sidebar',  # kept for backwards compatibiltity
       'seitenleiste': 'sidebar',

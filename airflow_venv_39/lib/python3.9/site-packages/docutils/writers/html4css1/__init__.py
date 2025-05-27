@@ -1,4 +1,4 @@
-# $Id: __init__.py 9037 2022-03-05 23:31:10Z milde $
+# $Id: __init__.py 9282 2022-11-28 23:55:46Z milde $
 # Author: David Goodger
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -300,7 +300,7 @@ class HTMLTranslator(writers._html_base.HTMLTranslator):
     def depart_definition(self, node):
         self.body.append('</dd>\n')
 
-    # don't add "simple" class value
+    # don't add "simple" class value, no special handling of "details"
     def visit_definition_list(self, node):
         self.body.append(self.starttag(node, 'dl', CLASS='docutils'))
 
@@ -344,7 +344,7 @@ class HTMLTranslator(writers._html_base.HTMLTranslator):
         if meta:
             meta_tag = '<meta name="%s" content="%s" />\n' \
                        % (name, self.attval(node.astext()))
-            self.add_meta(meta_tag)
+            self.meta.append(meta_tag)
         self.body.append(self.starttag(node, 'tr', ''))
         self.body.append('<th class="docinfo-name">%s:</th>\n<td>'
                          % self.language.labels[name])

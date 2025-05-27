@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3" "$0" "$@"
+'''exec' "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3.9" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

@@ -1,0 +1,100 @@
+[2025-05-27T19:01:12.371+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: order_monitoring_dag16.check_delayed_orders scheduled__2025-05-27T12:00:00+00:00 [queued]>
+[2025-05-27T19:01:12.375+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: order_monitoring_dag16.check_delayed_orders scheduled__2025-05-27T12:00:00+00:00 [queued]>
+[2025-05-27T19:01:12.375+0530] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-05-27T19:01:12.386+0530] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): check_delayed_orders> on 2025-05-27 12:00:00+00:00
+[2025-05-27T19:01:12.391+0530] {standard_task_runner.py:60} INFO - Started process 27278 to run task
+[2025-05-27T19:01:12.396+0530] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'order_monitoring_dag16', 'check_delayed_orders', 'scheduled__2025-05-27T12:00:00+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/order_monitoring_dag.py', '--cfg-path', '/var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T/tmpkdu2p_98']
+[2025-05-27T19:01:12.397+0530] {standard_task_runner.py:88} INFO - Job 26: Subtask check_delayed_orders
+[2025-05-27T19:01:12.437+0530] {task_command.py:423} INFO - Running <TaskInstance: order_monitoring_dag16.check_delayed_orders scheduled__2025-05-27T12:00:00+00:00 [running]> on host zafars-macbook-pro.local
+[2025-05-27T19:01:12.481+0530] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='imamzafar100@gmail.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='order_monitoring_dag16' AIRFLOW_CTX_TASK_ID='check_delayed_orders' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T12:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-27T12:00:00+00:00'
+[2025-05-27T19:01:12.483+0530] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T
+[2025-05-27T19:01:12.484+0530] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'source "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/activate" && python "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/utils/check_delayed_orders.py"']
+[2025-05-27T19:01:12.489+0530] {subprocess.py:86} INFO - Output:
+[2025-05-27T19:01:16.125+0530] {subprocess.py:93} INFO - ✅ Running Snowflake delayed orders check...
+[2025-05-27T19:01:16.126+0530] {subprocess.py:93} INFO - ✅ Python path: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python
+[2025-05-27T19:01:16.126+0530] {subprocess.py:93} INFO - ✅ Snowflake connector version: 3.15.0
+[2025-05-27T19:01:16.127+0530] {subprocess.py:93} INFO - ✅ Connected to Snowflake
+[2025-05-27T19:01:16.127+0530] {subprocess.py:93} INFO - ✅ Query Result: (2,)
+[2025-05-27T19:01:16.128+0530] {subprocess.py:93} INFO - ❌ Error: 2 delayed orders found.
+[2025-05-27T19:01:16.184+0530] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-27T19:01:16.193+0530] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-27T19:01:16.198+0530] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=order_monitoring_dag16, task_id=check_delayed_orders, execution_date=20250527T120000, start_date=20250527T133112, end_date=20250527T133116
+[2025-05-27T19:01:16.222+0530] {logging_mixin.py:188} WARNING - /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py:154 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2025-05-27T19:01:16.222+0530] {email.py:270} INFO - Email alerting: attempt 1
+[2025-05-27T19:01:16.227+0530] {email.py:270} INFO - Email alerting: attempt 1
+[2025-05-27T19:01:16.228+0530] {taskinstance.py:826} ERROR - Failed to send email to: ['imamzafar100@gmail.com']
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2334, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2499, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2516, in _execute_task
+    return _execute_task(self, context, task_orig)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1000, in _email_alert
+    send_email(task.email, subject, html_content)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 272, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 316, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 856, in create_connection
+    raise err
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 844, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 824, in _handle_failure
+    task_instance.email_alert(error, failure_context["task"])
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2946, in email_alert
+    _email_alert(task_instance=self, exception=exception, task=task)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1002, in _email_alert
+    send_email(task.email, subject, html_content_err)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 154, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 272, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/utils/email.py", line 316, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 856, in create_connection
+    raise err
+  File "/usr/local/Cellar/python@3.9/3.9.22_1/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 844, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+[2025-05-27T19:01:16.241+0530] {standard_task_runner.py:107} ERROR - Failed to execute job 26 for task check_delayed_orders (Bash command failed. The command returned a non-zero exit code 1.; 27278)
+[2025-05-27T19:01:16.274+0530] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-05-27T19:01:16.288+0530] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

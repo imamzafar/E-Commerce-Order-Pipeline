@@ -1,4 +1,4 @@
-# $Id: standalone.py 8979 2022-01-26 19:05:07Z milde $
+# $Id: standalone.py 9258 2022-11-21 14:51:43Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -49,7 +49,7 @@ class Reader(readers.Reader):
     config_section_dependencies = ('readers',)
 
     def get_transforms(self):
-        return readers.Reader.get_transforms(self) + [
+        return super().get_transforms() + [
             references.Substitutions,
             references.PropagateTargets,
             frontmatter.DocTitle,

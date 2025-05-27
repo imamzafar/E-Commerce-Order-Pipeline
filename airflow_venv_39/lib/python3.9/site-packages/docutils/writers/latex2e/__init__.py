@@ -1,4 +1,4 @@
-# $Id: __init__.py 9068 2022-06-13 12:05:08Z milde $
+# $Id: __init__.py 9331 2023-03-25 17:54:40Z aa-turner $
 # Author: Engelbert Gruber, Günter Milde
 # Maintainer: docutils-develop@lists.sourceforge.net
 # Copyright: This module has been placed in the public domain.
@@ -12,21 +12,21 @@ __docformat__ = 'reStructuredText'
 #
 # convention deactivate code by two # i.e. ##.
 
-import os
+from pathlib import Path
 import re
 import string
 from urllib.request import url2pathname
 import warnings
-
 try:
     import roman
 except ImportError:
     import docutils.utils.roman as roman
 
-import docutils
 from docutils import frontend, nodes, languages, writers, utils
 from docutils.transforms import writer_aux
 from docutils.utils.math import pick_math_environment, unichar2tex
+
+LATEX_WRITER_DIR = Path(__file__).parent
 
 
 class Writer(writers.Writer):
@@ -35,7 +35,7 @@ class Writer(writers.Writer):
     """Formats this writer supports."""
 
     default_template = 'default.tex'
-    default_template_path = os.path.dirname(os.path.abspath(__file__))
+    default_template_path = LATEX_WRITER_DIR
     default_preamble = ('% PDF Standard Fonts\n'
                         '\\usepackage{mathptmx} % Times\n'
                         '\\usepackage[scaled=.90]{helvet}\n'
@@ -199,10 +199,12 @@ class Writer(writers.Writer):
           'number or the page number.',
           ['--reference-label'],
           {'default': ''}),
-         ('Specify style and database for bibtex, for example '
-          '"--use-bibtex=mystyle,mydb1,mydb2".',
+         ('Specify style and database(s) for bibtex, for example '
+          '"--use-bibtex=unsrt,mydb1,mydb2". Provisional!',
           ['--use-bibtex'],
-          {'default': ''}),
+          {'default': '',
+           'metavar': '<style,bibfile[,bibfile,...]>',
+           'validator': frontend.validate_comma_separated_list}),
          ('Use legacy functions with class value list for '
           '\\DUtitle and \\DUadmonition.',
           ['--legacy-class-functions'],
@@ -254,9 +256,9 @@ class Writer(writers.Writer):
         writers.Writer.__init__(self)
         self.translator_class = LaTeXTranslator
 
-    # Override parent method to add latex-specific transforms
     def get_transforms(self):
-        return writers.Writer.get_transforms(self) + [
+        # Override parent method to add latex-specific transforms
+        return super().get_transforms() + [
                    # Convert specific admonitions to generic one
                    writer_aux.Admonitions,
                    # TODO: footnote collection transform
@@ -269,15 +271,10 @@ class Writer(writers.Writer):
         for part in self.visitor_attributes:
             setattr(self, part, getattr(visitor, part))
         # get template string from file
-        templatepath = self.document.settings.template
-        try:
-            with open(templatepath, encoding='utf-8') as fp:
-                template = fp.read()
-        except IOError:
-            templatepath = os.path.join(self.default_template_path,
-                                        templatepath)
-            with open(templatepath, encoding='utf-8') as fp:
-                template = fp.read()
+        templatepath = Path(self.document.settings.template)
+        if not templatepath.exists():
+            templatepath = self.default_template_path / templatepath
+        template = templatepath.read_text(encoding='utf-8')
         # fill template
         self.assemble_parts()  # create dictionary of parts
         self.output = string.Template(template).substitute(self.parts)
@@ -595,9 +592,7 @@ def _read_block(fp):
     return ''.join(block).rstrip()
 
 
-_docutils_sty = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             'docutils.sty')
-with open(_docutils_sty, encoding='utf-8') as fp:
+with open(LATEX_WRITER_DIR/'docutils.sty', encoding='utf-8') as fp:
     for line in fp:
         line = line.strip('% \n')
         if not line.endswith('::'):
@@ -657,7 +652,7 @@ class CharMaps:
         0x2001: '\\quad',                          # EM QUAD
         0x2002: '\\enskip',                        # EN SPACE
         0x2003: '\\quad',                          # EM SPACE
-        0x2008: '\\,',                             # PUNCTUATION SPACE   
+        0x2008: '\\,',                             # PUNCTUATION SPACE
         0x200b: '\\hspace{0pt}',                   # ZERO WIDTH SPACE
         0x202F: '\\,',                             # NARROW NO-BREAK SPACE
         # 0x02d8: '\\\u{ }',                       # BREVE
@@ -1169,7 +1164,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
         # ~~~~~~~~
         self.settings = settings = document.settings
         # warn of deprecated settings and changing defaults:
-        if settings.use_latex_citations is None:
+        if settings.use_latex_citations is None and not settings.use_bibtex:
             settings.use_latex_citations = False
             warnings.warn('The default for the setting "use_latex_citations" '
                           'will change to "True" in Docutils 1.0.',
@@ -1209,29 +1204,27 @@ class LaTeXTranslator(nodes.NodeVisitor):
         elif settings.use_verbatim_when_possible:
             self.literal_block_env = 'verbatim'
 
-        if self.settings.use_bibtex:
-            self.bibtex = self.settings.use_bibtex.split(',', 1)
-            # TODO avoid errors on not declared citations.
-        else:
-            self.bibtex = None
+        if settings.use_bibtex:
+            self.use_latex_citations = True
+        self.bibtex = settings.use_bibtex
         # language module for Docutils-generated text
         # (labels, bibliographic_fields, and author_separators)
         self.language_module = languages.get_language(settings.language_code,
                                                       document.reporter)
         self.babel = babel_class(settings.language_code, document.reporter)
         self.author_separator = self.language_module.author_separators[0]
-        d_options = [self.settings.documentoptions]
+        d_options = [settings.documentoptions]
         if self.babel.language not in ('english', ''):
             d_options.append(self.babel.language)
         self.documentoptions = ','.join(filter(None, d_options))
         self.d_class = DocumentClass(settings.documentclass,
                                      settings.use_part_section)
         # graphic package options:
-        if self.settings.graphicx_option == '':
+        if settings.graphicx_option == '':
             self.graphicx_package = r'\usepackage{graphicx}'
         else:
             self.graphicx_package = (r'\usepackage[%s]{graphicx}' %
-                                     self.settings.graphicx_option)
+                                     settings.graphicx_option)
         # footnotes: TODO: implement LaTeX footnotes
         self.docutils_footnotes = settings.docutils_footnotes
 
@@ -1241,7 +1234,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
         # Document parts
         self.head_prefix = [r'\documentclass[%s]{%s}' %
                             (self.documentoptions,
-                             self.settings.documentclass)]
+                             settings.documentclass)]
         self.requirements = SortableDict()  # made a list in depart_document()
         self.requirements['__static'] = r'\usepackage{ifthen}'
         self.latex_preamble = [settings.latex_preamble]
@@ -1305,7 +1298,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
         # ~~~~~~~~~~~~~~~~
         # Encodings:
         # Docutils' output-encoding => TeX input encoding
-        if self.latex_encoding != 'ascii':
+        if self.latex_encoding not in ('ascii', 'unicode', 'utf8'):
             self.requirements['_inputenc'] = (r'\usepackage[%s]{inputenc}'
                                               % self.latex_encoding)
         # TeX font encoding
@@ -1334,9 +1327,8 @@ class LaTeXTranslator(nodes.NodeVisitor):
         stylesheet_list = utils.get_stylesheet_list(settings)
         self.fallback_stylesheet = 'docutils' in stylesheet_list
         if self.fallback_stylesheet:
-            stylesheet_list = [sheet for sheet in stylesheet_list
-                               if sheet != 'docutils']
-            if self.settings.legacy_class_functions:
+            stylesheet_list.remove('docutils')
+            if settings.legacy_class_functions:
                 # docutils.sty is incompatible with legacy functions
                 self.fallback_stylesheet = False
             else:
@@ -1396,37 +1388,36 @@ class LaTeXTranslator(nodes.NodeVisitor):
 
     def stylesheet_call(self, path):
         """Return code to reference or embed stylesheet file `path`"""
+        path = Path(path)
         # is it a package (no extension or *.sty) or "normal" tex code:
-        (base, ext) = os.path.splitext(path)
-        is_package = ext in ['.sty', '']
+        is_package = path.suffix in ('.sty', '')
         # Embed content of style file:
         if self.settings.embed_stylesheet:
             if is_package:
-                path = base + '.sty'  # ensure extension
+                path = path.with_suffix('.sty')  # ensure extension
             try:
-                content = docutils.io.FileInput(source_path=path,
-                                                encoding='utf-8').read()
+                content = path.read_text(encoding='utf-8')
             except OSError as err:
-                msg = f'Cannot embed stylesheet:\n {err}'
+                msg = f'Cannot embed stylesheet:\n {err}'.replace('\\\\', '/')
                 self.document.reporter.error(msg)
                 return '% ' + msg.replace('\n', '\n% ')
             else:
-                self.settings.record_dependencies.add(path)
+                self.settings.record_dependencies.add(path.as_posix())
             if is_package:
-                content = '\n'.join([r'\makeatletter',
-                                     content,
-                                     r'\makeatother'])
-            return '%% embedded stylesheet: %s\n%s' % (path, content)
+                # allow '@' in macro names:
+                content = (f'\\makeatletter\n{content}\n\\makeatother')
+            return (f'% embedded stylesheet: {path.as_posix()}\n'
+                    f'{content}')
         # Link to style file:
         if is_package:
-            path = base  # drop extension
+            path = path.parent / path.stem  # drop extension
             cmd = r'\usepackage{%s}'
         else:
             cmd = r'\input{%s}'
         if self.settings.stylesheet_path:
             # adapt path relative to output (cf. config.html#stylesheet-path)
-            path = utils.relative_path(self.settings._destination, path)
-        return cmd % path
+            return cmd % utils.relative_path(self.settings._destination, path)
+        return cmd % path.as_posix()
 
     def to_latex_encoding(self, docutils_encoding):
         """Translate docutils encoding name into LaTeX's.
@@ -1461,13 +1452,12 @@ class LaTeXTranslator(nodes.NodeVisitor):
               # 'iso-8859-8': ''   # hebrew
               # 'iso-8859-10': ''  # latin6, more complete iso-8859-4
               }
-        encoding = docutils_encoding.lower()
+        encoding = docutils_encoding.lower()  # normalize case
+        encoding = encoding.split(':')[0]     # strip the error handler
         if encoding in tr:
             return tr[encoding]
-        # drop hyphen or low-line from "latin_1", "utf-8" and similar
-        encoding = encoding.replace('_', '').replace('-', '')
-        # strip the error handler
-        return encoding.split(':')[0]
+        # drop HYPHEN or LOW LINE from "latin_1", "utf-8" and similar
+        return encoding.replace('_', '').replace('-', '')
 
     def language_label(self, docutil_label):
         return self.language_module.labels[docutil_label]
@@ -1488,7 +1478,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
             table.update(CharMaps.special)
         # keep the underscore in citation references
         if self.inside_citation_reference_label and not self.alltt:
-            del(table[ord('_')])
+            del table[ord('_')]
         # Workarounds for OT1 font-encoding
         if self.font_encoding in ['OT1', ''] and not self.is_xetex:
             # * out-of-order characters in cmtt
@@ -1813,6 +1803,8 @@ class LaTeXTranslator(nodes.NodeVisitor):
             self.out.append('\\end{figure}\n')
 
     def visit_citation_reference(self, node):
+        if self.bibtex:
+            self._bibitems.append([node.astext()])
         if self.use_latex_citations:
             if not self.inside_citation_reference_label:
                 self.out.append(r'\cite{')
@@ -2002,7 +1994,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
                                                     protect=protect)
 
     def depart_document(self, node):
-        # Complete header with information gained from walkabout
+        # Complete "parts" with information gained from walkabout
         # * language setup
         if (self.babel.otherlanguages
             or self.babel.language not in ('', 'english')):
@@ -2018,53 +2010,67 @@ class LaTeXTranslator(nodes.NodeVisitor):
             self.pdfinfo.append('  pdfauthor={%s}' % authors)
         if self.pdfinfo:
             self.pdfsetup += [r'\hypersetup{'] + self.pdfinfo + ['}']
-        # Complete body
-        # * document title (with "use_latex_docinfo" also
-        #   'author', 'organization', 'contact', 'address' and 'date')
-        if self.title or (
-           self.use_latex_docinfo and (self.author_stack or self.date)):
-            # \title (empty \title prevents error with \maketitle)
-            title = [''.join(self.title)]
-            if self.title:
-                title += self.title_labels
-            if self.subtitle:
-                title += [r'\\',
-                          r'\DUdocumentsubtitle{%s}' % ''.join(self.subtitle),
-                          ] + self.subtitle_labels
-            self.titledata.append(r'\title{%s}' % '%\n  '.join(title))
-            # \author (empty \author prevents warning with \maketitle)
-            authors = ['\\\\\n'.join(author_entry)
-                       for author_entry in self.author_stack]
-            self.titledata.append(r'\author{%s}' %
-                                  ' \\and\n'.join(authors))
-            # \date (empty \date prevents defaulting to \today)
-            self.titledata.append(r'\date{%s}' % ', '.join(self.date))
-            # \maketitle in the body formats title with LaTeX
-            self.body_pre_docinfo.append('\\maketitle\n')
-
+        # * title (including author(s) and date if using "latex_docinfo")
+        if self.title or (self.use_latex_docinfo
+                          and (self.author_stack or self.date)):
+            self.make_title()  # see below
         # * bibliography
-        #   TODO insertion point of bibliography should be configurable.
-        if self.use_latex_citations and len(self._bibitems) > 0:
-            if not self.bibtex:
-                widest_label = ''
-                for bi in self._bibitems:
-                    if len(widest_label) < len(bi[0]):
-                        widest_label = bi[0]
-                self.out.append('\n\\begin{thebibliography}{%s}\n' %
-                                widest_label)
-                for bi in self._bibitems:
-                    # cite_key: underscores must not be escaped
-                    cite_key = bi[0].replace(r'\_', '_')
-                    self.out.append('\\bibitem[%s]{%s}{%s}\n' %
-                                    (bi[0], cite_key, bi[1]))
-                self.out.append('\\end{thebibliography}\n')
-            else:
-                self.out.append('\n\\bibliographystyle{%s}\n' %
-                                self.bibtex[0])
-                self.out.append('\\bibliography{%s}\n' % self.bibtex[1])
+        if self._bibitems:
+            self.append_bibliogaphy()  # see below
         # * make sure to generate a toc file if needed for local contents:
         if 'minitoc' in self.requirements and not self.has_latex_toc:
             self.out.append('\n\\faketableofcontents % for local ToCs\n')
+
+    def make_title(self):
+        # Auxiliary function called by `self.depart_document()`.
+        #
+        # Append ``\title``, ``\author``, and ``\date`` to "titledata".
+        # (We need all three, even if empty, to prevent errors
+        # and/or automatic display of the current date by \maketitle.)
+        # Append ``\maketitle`` to "body_pre_docinfo" parts.
+        #
+        # \title
+        title_arg = [''.join(self.title)]  # ensure len == 1
+        if self.title:
+            title_arg += self.title_labels
+        if self.subtitle:
+            title_arg += [r'\\',
+                          r'\DUdocumentsubtitle{%s}' % ''.join(self.subtitle),
+                          ] + self.subtitle_labels
+        self.titledata.append(r'\title{%s}' % '%\n  '.join(title_arg))
+        # \author
+        author_arg = ['\\\\\n'.join(author_entry)
+                      for author_entry in self.author_stack]
+        self.titledata.append(r'\author{%s}' %
+                              ' \\and\n'.join(author_arg))
+        # \date
+        self.titledata.append(r'\date{%s}' % ', '.join(self.date))
+        # \maketitle
+        # Must be in the document body. We add it to `body_pre_docinfo`
+        # to allow templates to put `titledata` into the document preamble.
+        self.body_pre_docinfo.append('\\maketitle\n')
+
+    def append_bibliogaphy(self):
+        # Add bibliography at end of document.
+        # TODO insertion point should be configurable.
+        # Auxiliary function called by `depart_document`.
+        if self.bibtex:
+            self.out.append('\n\\bibliographystyle{%s}\n' % self.bibtex[0])
+            self.out.append('\\bibliography{%s}\n' % ','.join(self.bibtex[1:]))
+        elif self.use_latex_citations:
+            # TODO: insert citations at point of definition.
+            widest_label = ''
+            for bibitem in self._bibitems:
+                if len(widest_label) < len(bibitem[0]):
+                    widest_label = bibitem[0]
+            self.out.append('\n\\begin{thebibliography}{%s}\n' %
+                            widest_label)
+            for bibitem in self._bibitems:
+                # cite_key: underscores must not be escaped
+                cite_key = bibitem[0].replace(r'\_', '_')
+                self.out.append('\\bibitem[%s]{%s}{%s}\n' %
+                                (bibitem[0], cite_key, bibitem[1]))
+            self.out.append('\\end{thebibliography}\n')
 
     def visit_emphasis(self, node):
         self.out.append('\\emph{')
@@ -3168,7 +3174,7 @@ class LaTeXTranslator(nodes.NodeVisitor):
                              'chapter': 'mini',
                              'section': 'sect'}
             if 'chapter' in self.d_class.sections:
-                del(minitoc_names['section'])
+                del minitoc_names['section']
             try:
                 mtc_name = minitoc_names[section_name]
             except KeyError:

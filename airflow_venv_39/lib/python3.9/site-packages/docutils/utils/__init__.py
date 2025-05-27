@@ -1,4 +1,4 @@
-# $Id: __init__.py 9068 2022-06-13 12:05:08Z milde $
+# $Id: __init__.py 9283 2022-11-28 23:55:57Z milde $
 # Author: David Goodger <goodger@python.org>
 # Copyright: This module has been placed in the public domain.
 
@@ -11,6 +11,7 @@ __docformat__ = 'reStructuredText'
 import sys
 import os
 import os.path
+from pathlib import PurePath, Path
 import re
 import itertools
 import warnings
@@ -478,7 +479,15 @@ def relative_path(source, target):
     """
     Build and return a path to `target`, relative to `source` (both files).
 
-    If there is no common prefix, return the absolute path to `target`.
+    Differences to `os.relpath()`:
+
+    * Inverse argument order.
+    * `source` expects path to a FILE (while os.relpath expects a dir)!
+      (Add a "dummy" file name if `source` points to a directory.)
+    * Always use Posix path separator ("/") for the output.
+    * Use `os.sep` for parsing the input (ignored by `os.relpath()`).
+    * If there is no common prefix, return the absolute path to `target`.
+
     """
     source_parts = os.path.abspath(source or type(target)('dummy_file')
                                    ).split(os.sep)
@@ -525,9 +534,9 @@ def get_stylesheet_reference(settings, relative_to=None):
 # Return 'stylesheet' or 'stylesheet_path' arguments as list.
 #
 # The original settings arguments are kept unchanged: you can test
-# with e.g. ``if settings.stylesheet_path:``
+# with e.g. ``if settings.stylesheet_path: ...``.
 #
-# Differences to ``get_stylesheet_reference``:
+# Differences to the depracated `get_stylesheet_reference()`:
 # * return value is a list
 # * no re-writing of the path (and therefore no optional argument)
 #   (if required, use ``utils.relative_path(source, target)``
@@ -546,8 +555,6 @@ def get_stylesheet_list(settings):
         # expand relative paths if found in stylesheet-dirs:
         stylesheets = [find_file_in_dirs(path, settings.stylesheet_dirs)
                        for path in stylesheets]
-        if os.sep != '/':  # for URLs, we need POSIX paths
-            stylesheets = [path.replace(os.sep, '/') for path in stylesheets]
     return stylesheets
 
 
@@ -557,17 +564,14 @@ def find_file_in_dirs(path, dirs):
 
     Return the first expansion that matches an existing file.
     """
-    if os.path.isabs(path):
-        return path
+    path = Path(path)
+    if path.is_absolute():
+        return path.as_posix()
     for d in dirs:
-        if d == '.':
-            f = path
-        else:
-            d = os.path.expanduser(d)
-            f = os.path.join(d, path)
-        if os.path.exists(f):
-            return f
-    return path
+        f = Path(d).expanduser() / path
+        if f.exists():
+            return f.as_posix()
+    return path.as_posix()
 
 
 def get_trim_footnote_ref_space(settings):
@@ -711,6 +715,19 @@ def normalize_language_tag(tag):
     return taglist
 
 
+def xml_declaration(encoding=None):
+    """Return an XML text declaration.
+
+    Include an encoding declaration, if `encoding`
+    is not 'unicode', '', or None.
+    """
+    if encoding and encoding.lower() != 'unicode':
+        encoding_declaration = f' encoding="{encoding}"'
+    else:
+        encoding_declaration = ''
+    return f'<?xml version="1.0"{encoding_declaration}?>\n'
+
+
 class DependencyList:
 
     """
@@ -720,15 +737,19 @@ class DependencyList:
     to explicitly call the close() method.
     """
 
-    def __init__(self, output_file=None, dependencies=[]):
+    def __init__(self, output_file=None, dependencies=()):
         """
         Initialize the dependency list, automatically setting the
         output file to `output_file` (see `set_output()`) and adding
         all supplied dependencies.
+
+        If output_file is None, no file output is done when calling add().
         """
-        self.set_output(output_file)
-        for i in dependencies:
-            self.add(i)
+        self.list = []
+        self.file = None
+        if output_file:
+            self.set_output(output_file)
+        self.add(*dependencies)
 
     def set_output(self, output_file):
         """
@@ -739,36 +760,34 @@ class DependencyList:
         immediately overwritten.
 
         If output_file is '-', the output will be written to stdout.
-        If it is None, no file output is done when calling add().
         """
-        self.list = []
         if output_file:
             if output_file == '-':
-                of = None
+                self.file = sys.stdout
             else:
-                of = output_file
-            self.file = io.FileOutput(destination_path=of,
-                                      encoding='utf-8', autoclose=False)
-        else:
-            self.file = None
+                self.file = open(output_file, 'w', encoding='utf-8')
 
-    def add(self, *filenames):
+    def add(self, *paths):
         """
-        If the dependency `filename` has not already been added,
-        append it to self.list and print it to self.file if self.file
-        is not None.
+        Append `path` to `self.list` unless it is already there.
+
+        Also append to `self.file` unless it is already there
+        or `self.file is `None`.
         """
-        for filename in filenames:
-            if filename not in self.list:
-                self.list.append(filename)
+        for path in paths:
+            if isinstance(path, PurePath):
+                path = path.as_posix()  # use '/' as separator
+            if path not in self.list:
+                self.list.append(path)
                 if self.file is not None:
-                    self.file.write(filename+'\n')
+                    self.file.write(path+'\n')
 
     def close(self):
         """
         Close the output file.
         """
-        self.file.close()
+        if self.file is not sys.stdout:
+            self.file.close()
         self.file = None
 
     def __repr__(self):

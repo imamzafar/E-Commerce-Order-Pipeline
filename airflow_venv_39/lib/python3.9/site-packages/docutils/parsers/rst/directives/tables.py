@@ -1,4 +1,4 @@
-# $Id: tables.py 9032 2022-03-05 23:29:06Z milde $
+# $Id: tables.py 9363 2023-04-24 16:37:37Z aa-turner $
 # Authors: David Goodger <goodger@python.org>; David Priest
 # Copyright: This module has been placed in the public domain.
 
@@ -10,13 +10,15 @@ __docformat__ = 'reStructuredText'
 
 
 import csv
-import os.path
+from pathlib import Path
 import warnings
 
 from docutils import io, nodes, statemachine, utils
 from docutils.utils import SystemMessagePropagation
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
+from urllib.request import urlopen
+from urllib.error import URLError
 
 
 def align(argument):
@@ -53,12 +55,20 @@ class Table(Directive):
         return title, messages
 
     def process_header_option(self):
+        # Provisional
+        # * Will move to CSVTable in Docutils 0.21
+        #   as it calls `self.HeaderDialect()` only defined in CSVTable.
+        # * Will change to use the same CSV dialect as the body to get in line
+        #   with the specification in ref/rst/directives.txt in Docutils 0.21.
         source = self.state_machine.get_source(self.lineno - 1)
         table_head = []
         max_header_cols = 0
         if 'header' in self.options:   # separate table header in option
+            with warnings.catch_warnings():
+                warnings.simplefilter('ignore')
+                header_dialect = self.HeaderDialect()
             rows, max_header_cols = self.parse_csv_data_into_rows(
-                self.options['header'].split('\n'), self.HeaderDialect(),
+                self.options['header'].split('\n'), header_dialect,
                 source)
             table_head.extend(rows)
         return table_head, max_header_cols
@@ -132,6 +142,11 @@ class Table(Directive):
 
 
 class RSTTable(Table):
+    """
+    Class for the `"table" directive`__ for formal tables using rST syntax.
+
+    __ https://docutils.sourceforge.io/docs/ref/rst/directives.html
+    """
 
     def run(self):
         if not self.content:
@@ -219,12 +234,28 @@ class CSVTable(Table):
             if 'escape' in options:
                 self.doublequote = False
                 self.escapechar = options['escape']
-            csv.Dialect.__init__(self)
+            super().__init__()
 
     class HeaderDialect(csv.Dialect):
+        """
+        CSV dialect used for the "header" option data.
 
-        """CSV dialect to use for the "header" option data."""
-
+        Deprecated. Will be removed in Docutils 0.22.
+        """
+        # The separate HeaderDialect was introduced in revision 2294
+        # (2004-06-17) in the sandbox before the "csv-table" directive moved
+        # to the trunk in r2309. Discussion in docutils-devel around this time
+        # did not mention a rationale (part of the discussion was in private
+        # mail).
+        # This is in conflict with the documentation, which always said:
+        # ""
+        # and did not change in this aspect.
+        #
+        # Maybe it was intended to have similar escape rules for rST and CSV,
+        # however with the current implementation this means we need
+        # `\\` for rST markup and ``\\\\`` for a literal backslash
+        # in the "option" header but ``\`` and ``\\`` in the header-lines and
+        # table cells of the main CSV data.
         delimiter = ','
         quotechar = '"'
         escapechar = '\\'
@@ -234,8 +265,18 @@ class CSVTable(Table):
         lineterminator = '\n'
         quoting = csv.QUOTE_MINIMAL
 
-    def check_requirements(self):
-        pass
+        def __init__(self):
+            warnings.warn('CSVTable.HeaderDialect will be removed '
+                          'in Docutils 0.22.',
+                          PendingDeprecationWarning, stacklevel=2)
+            super().__init__()
+
+    @staticmethod
+    def check_requirements():
+        warnings.warn('CSVTable.check_requirements()'
+                      ' is not required with Python 3'
+                      ' and will be removed in Docutils 0.22.',
+                      DeprecationWarning, stacklevel=2)
 
     def run(self):
         try:
@@ -247,7 +288,6 @@ class CSVTable(Table):
                     nodes.literal_block(self.block_text, self.block_text),
                     line=self.lineno)
                 return [warning]
-            self.check_requirements()
             title, messages = self.make_title()
             csv_data, source = self.get_csv_data()
             table_head, max_header_cols = self.process_header_option()
@@ -310,11 +350,10 @@ class CSVTable(Table):
                     nodes.literal_block(self.block_text, self.block_text),
                     line=self.lineno)
                 raise SystemMessagePropagation(error)
-            source_dir = os.path.dirname(
-                os.path.abspath(self.state.document.current_source))
-            source = os.path.normpath(os.path.join(source_dir,
-                                                   self.options['file']))
-            source = utils.relative_path(None, source)
+            source = self.options['file']
+            # resolve path to external file
+            _base = Path(self.state.document.current_source).parent
+            source = utils.relative_path(None, _base/source)
             try:
                 csv_file = io.FileInput(source_path=source,
                                         encoding=encoding,
@@ -330,16 +369,10 @@ class CSVTable(Table):
             else:
                 self.state.document.settings.record_dependencies.add(source)
         elif 'url' in self.options:
-            # CSV data is from a URL.
-            # Do not import urllib at the top of the module because
-            # it may fail due to broken SSL dependencies, and it takes
-            # about 0.15 seconds to load. Update: < 0.03s with Py3k.
-            from urllib.request import urlopen
-            from urllib.error import URLError
-
             source = self.options['url']
             try:
-                csv_text = urlopen(source).read()
+                with urlopen(source) as response:
+                    csv_text = response.read()
             except (URLError, OSError, ValueError) as error:
                 severe = self.reporter.severe(
                       'Problems with "%s" directive URL "%s":\n%s.'
@@ -378,7 +411,7 @@ class CSVTable(Table):
         return s
 
     def parse_csv_data_into_rows(self, csv_data, dialect, source):
-        csv_reader = csv.reader([line + '\n' for line in csv_data],
+        csv_reader = csv.reader((line + '\n' for line in csv_data),
                                 dialect=dialect)
         rows = []
         max_cols = 0

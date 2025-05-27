@@ -1,11 +1,12 @@
 __all__ = ("commonmark", "default", "zero", "js_default", "gfm_like")
 
 from . import commonmark, default, zero
+from ..utils import PresetType
 
 js_default = default
 
 
-class gfm_like:
+class gfm_like:  # noqa: N801
     """GitHub Flavoured Markdown (GFM) like.
 
     This adds the linkify, table and strikethrough components to CommmonMark.
@@ -16,11 +17,11 @@ class gfm_like:
     """
 
     @staticmethod
-    def make():
+    def make() -> PresetType:
         config = commonmark.make()
         config["components"]["core"]["rules"].append("linkify")
         config["components"]["block"]["rules"].append("table")
-        config["components"]["inline"]["rules"].append("strikethrough")
+        config["components"]["inline"]["rules"].extend(["strikethrough", "linkify"])
         config["components"]["inline"]["rules2"].append("strikethrough")
         config["options"]["linkify"] = True
         config["options"]["html"] = True

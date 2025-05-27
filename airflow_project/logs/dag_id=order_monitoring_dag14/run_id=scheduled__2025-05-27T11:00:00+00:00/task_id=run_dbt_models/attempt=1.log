@@ -1,0 +1,36 @@
+[2025-05-27T18:24:01.472+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: order_monitoring_dag14.run_dbt_models scheduled__2025-05-27T11:00:00+00:00 [queued]>
+[2025-05-27T18:24:01.477+0530] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: order_monitoring_dag14.run_dbt_models scheduled__2025-05-27T11:00:00+00:00 [queued]>
+[2025-05-27T18:24:01.477+0530] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-05-27T18:24:01.486+0530] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): run_dbt_models> on 2025-05-27 11:00:00+00:00
+[2025-05-27T18:24:01.491+0530] {standard_task_runner.py:60} INFO - Started process 25763 to run task
+[2025-05-27T18:24:01.496+0530] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'order_monitoring_dag14', 'run_dbt_models', 'scheduled__2025-05-27T11:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/order_monitoring_dag.py', '--cfg-path', '/var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T/tmpm66h4u1p']
+[2025-05-27T18:24:01.498+0530] {standard_task_runner.py:88} INFO - Job 14: Subtask run_dbt_models
+[2025-05-27T18:24:01.537+0530] {task_command.py:423} INFO - Running <TaskInstance: order_monitoring_dag14.run_dbt_models scheduled__2025-05-27T11:00:00+00:00 [running]> on host zafars-macbook-pro.local
+[2025-05-27T18:24:01.586+0530] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='imamzafar100@gmail.com' AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='order_monitoring_dag14' AIRFLOW_CTX_TASK_ID='run_dbt_models' AIRFLOW_CTX_EXECUTION_DATE='2025-05-27T11:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-27T11:00:00+00:00'
+[2025-05-27T18:24:01.589+0530] {subprocess.py:63} INFO - Tmp dir root location: /var/folders/7w/779kl2wj7p9971zq3yv085jm0000gn/T
+[2025-05-27T18:24:01.590+0530] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'source "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/activate" && cd "/Users/zafarimam/Documents/E-Commerce Order Pipeline/dbt_ecommerce" && dbt run']
+[2025-05-27T18:24:01.596+0530] {subprocess.py:86} INFO - Output:
+[2025-05-27T18:24:03.632+0530] {subprocess.py:93} INFO - [0m12:54:03  Running with dbt=1.9.4
+[2025-05-27T18:24:04.243+0530] {subprocess.py:93} INFO - [0m12:54:04  Registered adapter: snowflake=1.9.4
+[2025-05-27T18:24:04.844+0530] {subprocess.py:93} INFO - [0m12:54:04  Found 4 models, 476 macros
+[2025-05-27T18:24:04.846+0530] {subprocess.py:93} INFO - [0m12:54:04
+[2025-05-27T18:24:04.846+0530] {subprocess.py:93} INFO - [0m12:54:04  Concurrency: 1 threads (target='dev')
+[2025-05-27T18:24:04.847+0530] {subprocess.py:93} INFO - [0m12:54:04
+[2025-05-27T18:24:05.865+0530] {subprocess.py:93} INFO - [0m12:54:05  1 of 4 START sql view model analytics.stg_customers ............................ [RUN]
+[2025-05-27T18:24:06.202+0530] {subprocess.py:93} INFO - [0m12:54:06  1 of 4 OK created sql view model analytics.stg_customers ....................... [[32mSUCCESS 1[0m in 0.33s]
+[2025-05-27T18:24:06.204+0530] {subprocess.py:93} INFO - [0m12:54:06  2 of 4 START sql view model analytics.stg_orders ............................... [RUN]
+[2025-05-27T18:24:06.483+0530] {subprocess.py:93} INFO - [0m12:54:06  2 of 4 OK created sql view model analytics.stg_orders .......................... [[32mSUCCESS 1[0m in 0.28s]
+[2025-05-27T18:24:06.487+0530] {subprocess.py:93} INFO - [0m12:54:06  3 of 4 START sql view model analytics.stg_shipments ............................ [RUN]
+[2025-05-27T18:24:06.891+0530] {subprocess.py:93} INFO - [0m12:54:06  3 of 4 OK created sql view model analytics.stg_shipments ....................... [[32mSUCCESS 1[0m in 0.40s]
+[2025-05-27T18:24:06.894+0530] {subprocess.py:93} INFO - [0m12:54:06  4 of 4 START sql view model analytics.order_status ............................. [RUN]
+[2025-05-27T18:24:07.401+0530] {subprocess.py:93} INFO - [0m12:54:07  4 of 4 OK created sql view model analytics.order_status ........................ [[32mSUCCESS 1[0m in 0.51s]
+[2025-05-27T18:24:07.494+0530] {subprocess.py:93} INFO - [0m12:54:07
+[2025-05-27T18:24:07.495+0530] {subprocess.py:93} INFO - [0m12:54:07  Finished running 4 view models in 0 hours 0 minutes and 2.65 seconds (2.65s).
+[2025-05-27T18:24:07.546+0530] {subprocess.py:93} INFO - [0m12:54:07
+[2025-05-27T18:24:07.547+0530] {subprocess.py:93} INFO - [0m12:54:07  [32mCompleted successfully[0m
+[2025-05-27T18:24:07.547+0530] {subprocess.py:93} INFO - [0m12:54:07
+[2025-05-27T18:24:07.548+0530] {subprocess.py:93} INFO - [0m12:54:07  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[2025-05-27T18:24:08.972+0530] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-27T18:24:08.992+0530] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=order_monitoring_dag14, task_id=run_dbt_models, execution_date=20250527T110000, start_date=20250527T125401, end_date=20250527T125408
+[2025-05-27T18:24:09.041+0530] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-05-27T18:24:09.059+0530] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

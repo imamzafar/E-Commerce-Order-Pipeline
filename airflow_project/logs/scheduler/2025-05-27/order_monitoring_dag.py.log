@@ -1,0 +1,474 @@
+[2025-05-27T17:39:37.320+0530] {processor.py:161} INFO - Started process (PID=22882) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:39:37.321+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T17:39:37.322+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:39:37.322+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:39:37.325+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:39:37.323+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py", line 39
+    print(f"account {sf_config["account"]}")
+                                ^
+SyntaxError: f-string: unmatched '['
+[2025-05-27T17:39:37.325+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:39:37.403+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.084 seconds
+[2025-05-27T17:43:29.665+0530] {processor.py:161} INFO - Started process (PID=23009) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:43:29.666+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T17:43:29.667+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:43:29.667+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:43:29.693+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:43:29.693+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py", line 8, in <module>
+    import snowflake.connector
+ModuleNotFoundError: No module named 'snowflake'
+[2025-05-27T17:43:29.694+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:43:29.767+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.104 seconds
+[2025-05-27T17:45:16.622+0530] {processor.py:161} INFO - Started process (PID=23067) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:45:16.623+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T17:45:16.623+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:45:16.623+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:45:16.646+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:45:16.646+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py", line 8, in <module>
+    import snowflake.connector
+ModuleNotFoundError: No module named 'snowflake'
+[2025-05-27T17:45:16.647+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:45:16.717+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.097 seconds
+[2025-05-27T17:52:15.568+0530] {processor.py:161} INFO - Started process (PID=23382) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:52:15.569+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T17:52:15.570+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:52:15.570+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:52:15.593+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:52:15.593+0530] {dagbag.py:348} ERROR - Failed to import: /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+Traceback (most recent call last):
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py", line 8, in <module>
+    import snowflake.connector
+ModuleNotFoundError: No module named 'snowflake'
+[2025-05-27T17:52:15.594+0530] {processor.py:842} WARNING - No viable dags retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:52:15.666+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.100 seconds
+[2025-05-27T17:54:39.784+0530] {processor.py:161} INFO - Started process (PID=23987) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:54:39.785+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T17:54:39.786+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:54:39.786+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:54:39.999+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:54:40.008+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:54:40.007+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T17:54:40.080+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:54:40.080+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 11:00:00+00:00, run_after=2025-05-27 12:00:00+00:00
+[2025-05-27T17:54:40.095+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.312 seconds
+[2025-05-27T17:56:56.119+0530] {processor.py:161} INFO - Started process (PID=24093) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:56:56.120+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T17:56:56.121+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:56:56.121+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:56:56.334+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T17:56:56.481+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:56:56.481+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T17:56:56.496+0530] {logging_mixin.py:188} INFO - [2025-05-27T17:56:56.496+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T17:56:56.509+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.391 seconds
+[2025-05-27T18:01:01.912+0530] {processor.py:161} INFO - Started process (PID=24939) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:01:01.914+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:01:01.914+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:01:01.914+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:01:02.254+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:01:02.351+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:01:02.351+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:01:02.369+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:01:02.368+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:01:02.383+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.473 seconds
+[2025-05-27T18:05:21.224+0530] {processor.py:161} INFO - Started process (PID=25073) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:05:21.226+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:05:21.227+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:05:21.226+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:05:21.593+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:05:21.702+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:05:21.702+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:05:21.718+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:05:21.718+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:05:21.733+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.510 seconds
+[2025-05-27T18:07:25.014+0530] {processor.py:161} INFO - Started process (PID=25140) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:07:25.015+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:07:25.016+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:07:25.016+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:07:25.225+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:07:25.304+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:07:25.303+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:07:25.317+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:07:25.316+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:07:25.328+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.315 seconds
+[2025-05-27T18:09:26.505+0530] {processor.py:161} INFO - Started process (PID=25201) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:09:26.506+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:09:26.507+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:09:26.507+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:09:26.708+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:09:26.786+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:09:26.786+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:09:26.799+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:09:26.799+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:09:26.811+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.307 seconds
+[2025-05-27T18:11:10.641+0530] {processor.py:161} INFO - Started process (PID=25256) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:11:10.642+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:11:10.643+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:11:10.643+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:11:10.848+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:11:10.929+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:11:10.928+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:11:10.943+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:11:10.943+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:11:10.957+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.317 seconds
+[2025-05-27T18:13:06.245+0530] {processor.py:161} INFO - Started process (PID=25315) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:13:06.246+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:13:06.247+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:13:06.247+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:13:06.483+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag12' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:13:06.564+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:13:06.564+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:13:06.577+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:13:06.577+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag12 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:13:06.590+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.346 seconds
+[2025-05-27T18:15:01.862+0530] {processor.py:161} INFO - Started process (PID=25391) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:15:01.863+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:15:01.864+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:01.864+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:15:02.256+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag13' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:15:02.408+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:02.407+0530] {override.py:1769} INFO - Created Permission View: can delete on DAG:order_monitoring_dag13
+[2025-05-27T18:15:02.415+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:02.415+0530] {override.py:1769} INFO - Created Permission View: can edit on DAG:order_monitoring_dag13
+[2025-05-27T18:15:02.420+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:02.420+0530] {override.py:1769} INFO - Created Permission View: can read on DAG:order_monitoring_dag13
+[2025-05-27T18:15:02.420+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:02.420+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:15:02.429+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:02.428+0530] {dag.py:3058} INFO - Creating ORM DAG for order_monitoring_dag13
+[2025-05-27T18:15:02.436+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:15:02.436+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag13 to 2025-05-27 11:00:00+00:00, run_after=2025-05-27 12:00:00+00:00
+[2025-05-27T18:15:02.447+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.587 seconds
+[2025-05-27T18:16:46.119+0530] {processor.py:161} INFO - Started process (PID=25449) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:16:46.120+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:16:46.120+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:16:46.120+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:16:46.325+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag13' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:16:46.404+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:16:46.404+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:16:46.417+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:16:46.416+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag13 to 2025-05-27 11:00:00+00:00, run_after=2025-05-27 12:00:00+00:00
+[2025-05-27T18:16:46.434+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.317 seconds
+[2025-05-27T18:18:27.723+0530] {processor.py:161} INFO - Started process (PID=25520) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:18:27.724+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:18:27.724+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:18:27.724+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:18:27.924+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag13' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:18:27.999+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:18:27.999+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:18:28.011+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:18:28.011+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag13 to 2025-05-27 11:00:00+00:00, run_after=2025-05-27 12:00:00+00:00
+[2025-05-27T18:18:28.025+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.303 seconds
+[2025-05-27T18:21:11.366+0530] {processor.py:161} INFO - Started process (PID=25626) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:21:11.368+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:21:11.368+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:21:11.368+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:21:11.604+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag13' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:21:11.696+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:21:11.696+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:21:11.713+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:21:11.713+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag13 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:21:11.728+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.364 seconds
+[2025-05-27T18:23:24.411+0530] {processor.py:161} INFO - Started process (PID=25726) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:23:24.412+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:23:24.413+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.412+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:23:24.658+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag14' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:23:24.833+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.832+0530] {override.py:1769} INFO - Created Permission View: can read on DAG:order_monitoring_dag14
+[2025-05-27T18:23:24.842+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.842+0530] {override.py:1769} INFO - Created Permission View: can delete on DAG:order_monitoring_dag14
+[2025-05-27T18:23:24.847+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.847+0530] {override.py:1769} INFO - Created Permission View: can edit on DAG:order_monitoring_dag14
+[2025-05-27T18:23:24.848+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.847+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:23:24.857+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.857+0530] {dag.py:3058} INFO - Creating ORM DAG for order_monitoring_dag14
+[2025-05-27T18:23:24.866+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:23:24.865+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag14 to 2025-05-27 11:00:00+00:00, run_after=2025-05-27 12:00:00+00:00
+[2025-05-27T18:23:24.881+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.471 seconds
+[2025-05-27T18:26:25.050+0530] {processor.py:161} INFO - Started process (PID=25823) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:26:25.052+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:26:25.053+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:26:25.053+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:26:25.310+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag14' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:26:25.401+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:26:25.400+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:26:25.417+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:26:25.417+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag14 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:26:25.433+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.384 seconds
+[2025-05-27T18:28:36.523+0530] {processor.py:161} INFO - Started process (PID=25895) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:28:36.524+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:28:36.524+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.524+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:28:36.760+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:28:36.906+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.905+0530] {override.py:1769} INFO - Created Permission View: can read on DAG:order_monitoring_dag15
+[2025-05-27T18:28:36.915+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.915+0530] {override.py:1769} INFO - Created Permission View: can edit on DAG:order_monitoring_dag15
+[2025-05-27T18:28:36.920+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.920+0530] {override.py:1769} INFO - Created Permission View: can delete on DAG:order_monitoring_dag15
+[2025-05-27T18:28:36.920+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.920+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:28:36.929+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.928+0530] {dag.py:3058} INFO - Creating ORM DAG for order_monitoring_dag15
+[2025-05-27T18:28:36.937+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:28:36.936+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 11:00:00+00:00, run_after=2025-05-27 12:00:00+00:00
+[2025-05-27T18:28:36.949+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.428 seconds
+[2025-05-27T18:30:25.906+0530] {processor.py:161} INFO - Started process (PID=25955) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:30:25.907+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:30:25.908+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:30:25.908+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:30:26.111+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:30:26.185+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:30:26.185+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:30:26.198+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:30:26.198+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:30:26.212+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.307 seconds
+[2025-05-27T18:32:15.909+0530] {processor.py:161} INFO - Started process (PID=26016) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:32:15.910+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:32:15.911+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:32:15.911+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:32:16.109+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:32:16.182+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:32:16.182+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:32:16.195+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:32:16.195+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:32:16.213+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.305 seconds
+[2025-05-27T18:36:03.523+0530] {processor.py:161} INFO - Started process (PID=26172) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:36:03.524+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:36:03.525+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:36:03.525+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:36:03.757+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:36:03.848+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:36:03.848+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:36:03.865+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:36:03.865+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:36:03.880+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.359 seconds
+[2025-05-27T18:38:08.646+0530] {processor.py:161} INFO - Started process (PID=26240) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:38:08.646+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:38:08.647+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:38:08.647+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:38:08.885+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:38:08.978+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:38:08.978+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:38:08.995+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:38:08.995+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:38:09.010+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.365 seconds
+[2025-05-27T18:38:38.024+0530] {processor.py:161} INFO - Started process (PID=26424) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:38:38.025+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:38:38.025+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:38:38.025+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:38:38.246+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:38:38.256+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:38:38.255+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:38:38.331+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:38:38.331+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:38:38.345+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.322 seconds
+[2025-05-27T18:46:00.704+0530] {processor.py:161} INFO - Started process (PID=26690) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:46:00.705+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:46:00.706+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:46:00.706+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:46:01.082+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:46:01.295+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:46:01.295+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:46:01.310+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:46:01.310+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:46:01.326+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.623 seconds
+[2025-05-27T18:47:56.255+0530] {processor.py:161} INFO - Started process (PID=26752) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:47:56.256+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:47:56.256+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:47:56.256+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:47:56.494+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:47:56.586+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:47:56.586+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:47:56.603+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:47:56.603+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:47:56.619+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.365 seconds
+[2025-05-27T18:49:47.544+0530] {processor.py:161} INFO - Started process (PID=26832) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:49:47.545+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:49:47.546+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:49:47.546+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:49:47.753+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:49:47.827+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:49:47.827+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:49:47.840+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:49:47.840+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:49:47.853+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.310 seconds
+[2025-05-27T18:51:44.383+0530] {processor.py:161} INFO - Started process (PID=26919) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:51:44.384+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:51:44.385+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:51:44.385+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:51:44.584+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:51:44.662+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:51:44.661+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:51:44.674+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:51:44.674+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:51:44.687+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.305 seconds
+[2025-05-27T18:53:41.798+0530] {processor.py:161} INFO - Started process (PID=26980) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:53:41.799+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:53:41.799+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:53:41.799+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:53:42.030+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:53:42.116+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:53:42.115+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:53:42.129+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:53:42.128+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:53:42.143+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.346 seconds
+[2025-05-27T18:55:48.919+0530] {processor.py:161} INFO - Started process (PID=27049) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:55:48.921+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:55:48.921+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:55:48.921+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:55:49.285+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:55:49.368+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:55:49.368+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:55:49.383+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:55:49.382+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:55:49.398+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.480 seconds
+[2025-05-27T18:57:50.529+0530] {processor.py:161} INFO - Started process (PID=27141) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:57:50.531+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:57:50.531+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:57:50.531+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:57:50.912+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag15' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:57:50.996+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:57:50.995+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:57:51.009+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:57:51.009+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag15 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T18:57:51.023+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.496 seconds
+[2025-05-27T18:59:48.586+0530] {processor.py:161} INFO - Started process (PID=27203) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:59:48.587+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T18:59:48.588+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:48.588+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:59:48.953+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T18:59:49.176+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:49.175+0530] {override.py:1769} INFO - Created Permission View: can delete on DAG:order_monitoring_dag16
+[2025-05-27T18:59:49.188+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:49.187+0530] {override.py:1769} INFO - Created Permission View: can read on DAG:order_monitoring_dag16
+[2025-05-27T18:59:49.195+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:49.195+0530] {override.py:1769} INFO - Created Permission View: can edit on DAG:order_monitoring_dag16
+[2025-05-27T18:59:49.195+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:49.195+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T18:59:49.209+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:49.208+0530] {dag.py:3058} INFO - Creating ORM DAG for order_monitoring_dag16
+[2025-05-27T18:59:49.224+0530] {logging_mixin.py:188} INFO - [2025-05-27T18:59:49.224+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 12:00:00+00:00, run_after=2025-05-27 13:00:00+00:00
+[2025-05-27T18:59:49.253+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.668 seconds
+[2025-05-27T19:02:02.504+0530] {processor.py:161} INFO - Started process (PID=27312) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:02:02.506+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:02:02.506+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:02:02.506+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:02:02.516+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:02:02.609+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:02:02.609+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:02:02.625+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:02:02.625+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:02:02.642+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.139 seconds
+[2025-05-27T19:03:53.476+0530] {processor.py:161} INFO - Started process (PID=27379) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:03:53.477+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:03:53.477+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:03:53.477+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:03:53.487+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:03:53.601+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:03:53.600+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:03:53.616+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:03:53.616+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:03:53.634+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.160 seconds
+[2025-05-27T19:06:01.272+0530] {processor.py:161} INFO - Started process (PID=27432) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:06:01.273+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:06:01.274+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:06:01.273+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:06:01.283+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:06:01.376+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:06:01.376+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:06:01.392+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:06:01.392+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:06:01.408+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.138 seconds
+[2025-05-27T19:08:14.842+0530] {processor.py:161} INFO - Started process (PID=27522) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:08:14.843+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:08:14.844+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:08:14.844+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:08:14.853+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:08:14.935+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:08:14.935+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:08:14.948+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:08:14.948+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:08:14.960+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.119 seconds
+[2025-05-27T19:09:55.945+0530] {processor.py:161} INFO - Started process (PID=27583) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:09:55.946+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:09:55.947+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:09:55.947+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:09:55.955+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:09:56.033+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:09:56.033+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:09:56.046+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:09:56.046+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:09:56.064+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.120 seconds
+[2025-05-27T19:11:37.194+0530] {processor.py:161} INFO - Started process (PID=27637) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:11:37.195+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:11:37.195+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:11:37.195+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:11:37.203+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:11:37.279+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:11:37.279+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:11:37.292+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:11:37.292+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:11:37.309+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.116 seconds
+[2025-05-27T19:13:17.364+0530] {processor.py:161} INFO - Started process (PID=27689) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:13:17.365+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:13:17.366+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:13:17.365+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:13:17.373+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:13:17.450+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:13:17.450+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:13:17.463+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:13:17.463+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:13:17.476+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.113 seconds
+[2025-05-27T19:14:57.995+0530] {processor.py:161} INFO - Started process (PID=27740) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:14:57.996+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:14:57.997+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:14:57.997+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:14:58.005+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:14:58.084+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:14:58.084+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:14:58.097+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:14:58.097+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:14:58.115+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.120 seconds
+[2025-05-27T19:16:38.486+0530] {processor.py:161} INFO - Started process (PID=27795) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:16:38.487+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:16:38.488+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:16:38.487+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:16:38.496+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:16:38.578+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:16:38.577+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:16:38.591+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:16:38.591+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:16:38.604+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.119 seconds
+[2025-05-27T19:18:18.666+0530] {processor.py:161} INFO - Started process (PID=27849) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:18:18.667+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:18:18.668+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:18:18.667+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:18:18.676+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:18:18.754+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:18:18.754+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:18:18.767+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:18:18.767+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:18:18.780+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.115 seconds
+[2025-05-27T19:19:59.574+0530] {processor.py:161} INFO - Started process (PID=27935) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:19:59.575+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:19:59.576+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:19:59.575+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:19:59.583+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:19:59.661+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:19:59.661+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:19:59.675+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:19:59.675+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:19:59.692+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.119 seconds
+[2025-05-27T19:21:38.030+0530] {processor.py:161} INFO - Started process (PID=27989) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:21:38.031+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:21:38.031+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:21:38.031+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:21:38.039+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:21:38.117+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:21:38.117+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:21:38.130+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:21:38.130+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:21:38.143+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.114 seconds
+[2025-05-27T19:23:19.325+0530] {processor.py:161} INFO - Started process (PID=28051) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:23:19.326+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:23:19.326+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:23:19.326+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:23:19.334+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:23:19.413+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:23:19.413+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:23:19.426+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:23:19.426+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:23:19.439+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.116 seconds
+[2025-05-27T19:25:00.603+0530] {processor.py:161} INFO - Started process (PID=28105) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:25:00.604+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:25:00.605+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:25:00.604+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:25:00.613+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:25:00.691+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:25:00.691+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:25:00.705+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:25:00.704+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:25:00.722+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.120 seconds
+[2025-05-27T19:26:40.469+0530] {processor.py:161} INFO - Started process (PID=28157) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:26:40.470+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:26:40.471+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:26:40.470+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:26:40.478+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:26:40.555+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:26:40.555+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:26:40.568+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:26:40.568+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:26:40.585+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.117 seconds
+[2025-05-27T19:28:19.898+0530] {processor.py:161} INFO - Started process (PID=28211) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:28:19.899+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:28:19.900+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:28:19.900+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:28:19.908+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:28:19.985+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:28:19.984+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:28:19.997+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:28:19.997+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:28:20.010+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.113 seconds
+[2025-05-27T19:30:01.078+0530] {processor.py:161} INFO - Started process (PID=28263) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:30:01.079+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:30:01.079+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:30:01.079+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:30:01.087+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:30:01.165+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:30:01.165+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:30:01.178+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:30:01.178+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 13:00:00+00:00, run_after=2025-05-27 14:00:00+00:00
+[2025-05-27T19:30:01.191+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.115 seconds
+[2025-05-27T19:32:01.651+0530] {processor.py:161} INFO - Started process (PID=28346) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:32:01.652+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:32:01.652+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:32:01.652+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:32:01.661+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:32:01.740+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:32:01.739+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:32:01.753+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:32:01.753+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:32:01.770+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.120 seconds
+[2025-05-27T19:33:41.939+0530] {processor.py:161} INFO - Started process (PID=28399) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:33:41.940+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:33:41.941+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:33:41.941+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:33:41.949+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:33:42.026+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:33:42.026+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:33:42.039+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:33:42.039+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:33:42.051+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.113 seconds
+[2025-05-27T19:35:23.351+0530] {processor.py:161} INFO - Started process (PID=28450) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:35:23.352+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:35:23.353+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:35:23.352+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:35:23.360+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:35:23.438+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:35:23.438+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:35:23.451+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:35:23.451+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:35:23.466+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.116 seconds
+[2025-05-27T19:37:04.727+0530] {processor.py:161} INFO - Started process (PID=28504) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:37:04.727+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:37:04.728+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:37:04.728+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:37:04.736+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:37:04.814+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:37:04.814+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:37:04.827+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:37:04.827+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:37:04.844+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.119 seconds
+[2025-05-27T19:38:45.502+0530] {processor.py:161} INFO - Started process (PID=28555) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:38:45.503+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:38:45.503+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:38:45.503+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:38:45.511+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:38:45.588+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:38:45.588+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:38:45.601+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:38:45.601+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:38:45.618+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.117 seconds
+[2025-05-27T19:40:23.141+0530] {processor.py:161} INFO - Started process (PID=28605) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:40:23.142+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:40:23.142+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:40:23.142+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:40:23.150+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:40:23.229+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:40:23.228+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:40:23.242+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:40:23.242+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:40:23.254+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.115 seconds
+[2025-05-27T19:42:04.490+0530] {processor.py:161} INFO - Started process (PID=28659) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:42:04.491+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:42:04.491+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:42:04.491+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:42:04.499+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:42:04.579+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:42:04.578+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:42:04.592+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:42:04.592+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:42:04.609+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.120 seconds
+[2025-05-27T19:43:54.621+0530] {processor.py:161} INFO - Started process (PID=28739) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:43:54.623+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:43:54.623+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:43:54.623+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:43:54.634+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:43:54.720+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:43:54.720+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:43:54.738+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:43:54.737+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:43:54.752+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.132 seconds
+[2025-05-27T19:46:00.633+0530] {processor.py:161} INFO - Started process (PID=28857) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:46:00.635+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:46:00.635+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:46:00.635+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:46:00.643+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:46:00.722+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:46:00.722+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:46:00.736+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:46:00.736+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:46:00.750+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.118 seconds
+[2025-05-27T19:47:44.638+0530] {processor.py:161} INFO - Started process (PID=28925) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:47:44.639+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:47:44.640+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:47:44.640+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:47:44.648+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:47:44.732+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:47:44.732+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:47:44.746+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:47:44.746+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:47:44.759+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.121 seconds
+[2025-05-27T19:49:28.193+0530] {processor.py:161} INFO - Started process (PID=28976) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:49:28.194+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:49:28.194+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:49:28.194+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:49:28.203+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:49:28.287+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:49:28.286+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:49:28.300+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:49:28.300+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:49:28.313+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.122 seconds
+[2025-05-27T19:51:14.208+0530] {processor.py:161} INFO - Started process (PID=29057) to work on /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:51:14.209+0530] {processor.py:830} INFO - Processing file /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py for tasks to queue
+[2025-05-27T19:51:14.210+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:51:14.209+0530] {dagbag.py:538} INFO - Filling up the DagBag from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:51:14.219+0530] {processor.py:840} INFO - DAG(s) 'order_monitoring_dag16' retrieved from /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py
+[2025-05-27T19:51:14.302+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:51:14.302+0530] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-05-27T19:51:14.317+0530] {logging_mixin.py:188} INFO - [2025-05-27T19:51:14.317+0530] {dag.py:3823} INFO - Setting next_dagrun for order_monitoring_dag16 to 2025-05-27 14:00:00+00:00, run_after=2025-05-27 15:00:00+00:00
+[2025-05-27T19:51:14.334+0530] {processor.py:183} INFO - Processing /Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_project/dags/order_monitoring_dag.py took 0.127 seconds

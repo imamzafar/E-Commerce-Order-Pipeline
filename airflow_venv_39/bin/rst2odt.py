@@ -1,6 +1,6 @@
-#!/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3
+#!/Users/zafarimam/Documents/E-Commerce Order Pipeline/airflow_venv_39/bin/python3.9
 
-# $Id: rst2odt.py 8994 2022-01-29 16:28:17Z milde $
+# $Id: rst2odt.py 9115 2022-07-28 17:06:24Z milde $
 # Author: Dave Kuhlman <dkuhlman@rexx.com>
 # Copyright: This module has been placed in the public domain.
 
@@ -11,7 +11,7 @@ A front end to the Docutils Publisher, producing OpenOffice documents.
 try:
     import locale
     locale.setlocale(locale.LC_ALL, '')
-except:
+except Exception:
     pass
 
 from docutils.core import publish_cmdline_to_binary, default_description
